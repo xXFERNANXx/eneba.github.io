@@ -1,0 +1,1987 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+    <script src="https://unpkg.com/@phosphor-icons/web"></script>
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@4.7.3/dist/full.min.css" rel="stylesheet" type="text/css" />
+    <title>Eneba Clone</title>
+    <style>
+        .scroll-btn {
+            display: none;
+        }
+        .carousel-container:hover .scroll-btn {
+            display: block;
+        }
+        .slider {
+            scrollbar-width: none;
+        }
+        .slider-container:hover .slider {
+            scrollbar-width: thin;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <!------------------------------------ACTIVIDAD-1---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------->
+        <nav class="bg-purple-800 flex items-center justify-between h-24 sm:h-20 md:h-24">
+            <div class="container mx-auto px-4 sm:px-6 lg:px-32 flex items-center">
+                <a href="./index.html"><img src="https://static.eneba.games/branding/v2/logoFull.svg" alt="logo"
+                        class="w-24 sm:w-32 md:w-40"></a>
+                <div class="relative ml-4">
+                    <input type="text"
+                        class="py-2 mx-auto px-4 sm:px-6 lg:px-32 border-2 border-white-600 focus:outline-none bg-purple-800"
+                        placeholder="Buscar">
+                </div>
+                <button id="openModal" type="button"
+                    class="flex items-center px-6 py-2 text-white hover:text-yellow-500">
+                    <img src="https://d3sxshmncs10te.cloudfront.net/icon/premium/png-512/165886.png?token=eyJhbGciOiJoczI1NiIsImtpZCI6ImRlZmF1bHQifQ__.eyJpc3MiOiJkM3N4c2htbmNzMTB0ZS5jbG91ZGZyb250Lm5ldCIsImV4cCI6MTcxMTMzNTY2NywicSI6bnVsbCwiaWF0IjoxNzExMDc2NDY3fQ__.1ca4efc72d6e6d0d2f25a532dd414ddbc92b2c318fd734bbb2c5ebee953f2720"
+                        alt="favicon" class="mr-2 w-4 h-4">
+                    <p id="pRegion">Español | Peso mexicano (MXN)</p>
+                </button>
+                <button type="button" class="flex items-center text-white hover:text-yellow-500">
+                    <svg viewBox="0 0 24 24" height="24" width="24" xmlns="http://www.w3.org/2000/svg"
+                        stroke-width="1.5" class="" style="max-width:24px;min-width:24px;height:auto">
+                        <path
+                            d="M12,21.844l-9.588-10A5.672,5.672,0,0,1,1.349,5.293h0a5.673,5.673,0,0,1,9.085-1.474L12,5.384l1.566-1.565a5.673,5.673,0,0,1,9.085,1.474h0a5.673,5.673,0,0,1-1.062,6.548Z"
+                            fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"></path>
+                    </svg>
+                </button>
+                <button type="button" class="flex items-center text-white hover:text-yellow-500 ml-4">
+                    <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg"
+                        class="" style="max-width:24px;min-width:24px;height:auto">
+                        <path
+                            d="M12 12.7499H5.386C5.1498 12.75 4.9212 12.6664 4.74067 12.5139C4.5602 12.3615 4.43953 12.1502 4.4 11.9173L2.642 1.58395C2.60233 1.35119 2.4816 1.13996 2.30113 0.987686C2.12067 0.835406 1.89213 0.7519 1.656 0.751953H1"
+                            stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"></path>
+                        <path d="M10.75 14.75C10.8881 14.75 11 14.6381 11 14.5C11 14.3619 10.8881 14.25 10.75 14.25"
+                            stroke="currentColor"></path>
+                        <path
+                            d="M10.75 14.75C10.6119 14.75 10.5 14.6381 10.5 14.5C10.5 14.3619 10.6119 14.25 10.75 14.25"
+                            stroke="currentColor"></path>
+                        <path d="M5.75 14.75C5.88807 14.75 6 14.6381 6 14.5C6 14.3619 5.88807 14.25 5.75 14.25"
+                            stroke="currentColor">
+                        </path>
+                        <path d="M5.75 14.75C5.61193 14.75 5.5 14.6381 5.5 14.5C5.5 14.3619 5.61193 14.25 5.75 14.25"
+                            stroke="currentColor"></path>
+                        <path
+                            d="M4.03141 9.75007H12.0787C12.5247 9.75001 12.9578 9.60094 13.3093 9.32647C13.6608 9.05207 13.9105 8.66801 14.0187 8.23541L14.9854 4.36873C15.0038 4.29499 15.0052 4.21802 14.9895 4.14366C14.9737 4.0693 14.9412 3.99952 14.8944 3.93961C14.8476 3.87971 14.7878 3.83126 14.7194 3.79795C14.6511 3.76465 14.5761 3.74736 14.5001 3.7474H3.01075"
+                            stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"></path>
+                    </svg>
+                </button>
+                <div class="flex items-center px-2 py-2 text-white">
+                    <button type="button" class="flex items-center text-white hover:text-yellow-500 ml-4">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 25" class=""
+                            style="max-width: 24px; min-width: 24px; height: auto;">
+                            <path fill="currentColor" fill-rule="evenodd"
+                                d="M11.667 1.75a5.417 5.417 0 1 0 0 10.834 5.417 5.417 0 0 0 0-10.834Zm-2.77 2.647a3.917 3.917 0 1 1 5.54 5.54 3.917 3.917 0 0 1-5.54-5.54ZM6.07 16.902A7.917 7.917 0 0 1 19.583 22.5a.75.75 0 0 0 1.5 0 9.417 9.417 0 1 0-18.833 0 .75.75 0 0 0 1.5 0c0-2.1.834-4.113 2.319-5.598Z"
+                                clip-rule="evenodd"></path>
+                        </svg>
+                        Iniciar sesion
+                    </button>
+                    <p class="mr- ml-2">|</p>
+                    <button type="button" class="flex items-center text-white hover:text-yellow-500 ml-4">
+                        Registrarse
+                    </button>
+                </div>
+            </div>
+            <!-- Modal -->
+            <div id="myModal"
+                class="hidden fixed top-0 left-0 w-full h-full bg-gray-900 bg-opacity-75 flex justify-center items-center">
+                <div class="bg-purple-800 p-8 rounded-lg text-white">
+                    <h3>Actualiza tu configuración</h3>
+                    <p class="mt-4">Establece tu región preferida, idioma y moneda preferida.</p>
+                    <p class="mt-4">Region</p>
+                    <select id="opcionesRegion" title="opcionesRegion"
+                        class="bg-purple-900 w-full px-4 py-2 text-sm appearance-none focus:outline-none">
+                        <option value="opcion1">Mexico</option>
+                        <option value="opcion2">España</option>
+                        <option value="opcion3">Argentina</option>
+                        <option value="opcion4">Chile</option>
+                        <option value="opcion5">Colombia</option>
+                    </select>
+                    <p class="mt-4">Idioma</p>
+                    <select id="opcionesIdioma" title="opcionesIdioma"
+                        class="bg-purple-900 w-full px-4 py-2 text-sm appearance-none focus:outline-none">
+                        <option value="opcion1">Español</option>
+                        <option value="opcion2">English EU</option>
+                        <option value="opcion3">Portugues</option>
+                        <option value="opcion4">Melayu</option>
+                        <option value="opcion5">Deutsch</option>
+                    </select>
+                    <p class="mt-4">moneda</p>
+                    <select id="opcionesMoneda" title="opcionesMoneda"
+                        class="bg-purple-900 w-full px-4 py-2 text-sm appearance-none focus:outline-none">
+                        <option value="opcion1">Peso mexicano (MXN)</option>
+                        <option value="opcion2">Euro (EUR)</option>
+                        <option value="opcion3">Dolar (USD)</option>
+                        <option value="opcion4">Corona sueca (SEK)</option>
+                        <option value="opcion5">Peso dominicano (DOP)</option>
+                    </select>
+                    <button id="closeModal"
+                        class="mt-4 px-4 py-2 bg-purple-800 text-white border border-white-600 rounded hover:bg-purple-700">Cancelar</button>
+                    <button id="saveModal"
+                        class="mt-4 px-4 py-2 bg-yellow-400 text-white border border-yellow-400 rounded hover:bg-yellow-700">Guardar</button>
+                </div>
+            </div>
+        </nav>
+        <!--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------->
+        <!------------------------------------ACTIVIDAD-2---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------->
+        <div class=" flex w-full bg-[#311077] place-content-center ">
+            <div class="flex text-gray-200 leading-4">
+                <div class="hover:bg-[#1F0A4D]">
+                    <p class="px-4 py-3">Tienda</p>
+                </div>
+                <div class="hover:bg-[#1F0A4D]">
+                    <p class="px-4 py-3">Recargas de móvil</p>
+                </div>
+                <div class="hover:bg-[#1F0A4D] flex">
+                    <p class="px-4 py-3">Juegos móviles</p>
+                    <div class="mt-3 shadow-xl pr-3">
+                        <span
+                            class="shadow-2xl border border-green-700 text-green-700 font-bold px-3 py-[2.5px] text-[10px] rounded-2xl bg-green-100">NUEVO</span>
+                    </div>
+                </div>
+                <div id="JuegosMenuCategory" class="hover:bg-[#1F0A4D] flex"
+                    onmouseover="showDropdownMenu('dropdownJuegosMenu')"
+                    onmouseout="hiddeDropdownMenu('dropdownJuegosMenu')">
+                    <p class="pl-4 pr-1 py-3">Juegos</p>
+                    <ion-icon class=" pt-[13px]" name="chevron-down-outline"></ion-icon>
+                </div>
+                <div id="TDRMenuCategory" class="hover:bg-[#1F0A4D] flex"
+                    onmouseover="showDropdownMenu('dropdownTDRMenu')" onmouseout="hiddeDropdownMenu('dropdownTDRMenu')">
+                    <p class="pl-4 pr-1 py-3">Targetas de regalo</p>
+                    <ion-icon class=" pt-[13px]" name="chevron-down-outline"></ion-icon>
+                </div>
+                <div id="XboxMenuCategory" class="hover:bg-[#1F0A4D] flex"
+                    onmouseover="showDropdownMenu('dropdownXboxMenu')"
+                    onmouseout="hiddeDropdownMenu('dropdownXboxMenu')">
+                    <p class="pl-4 pr-1 py-3">Xbox</p>
+                    <ion-icon class=" pt-[13px]" name="chevron-down-outline"></ion-icon>
+                </div>
+                <div id="PSNMenuCategory" class="hover:bg-[#1F0A4D] flex"
+                    onmouseover="showDropdownMenu('dropdownPSNMenu')" onmouseout="hiddeDropdownMenu('dropdownPSNMenu')">
+                    <p class="pl-4 pr-1 py-3">PSN</p>
+                    <ion-icon class=" pt-[13px]" name="chevron-down-outline"></ion-icon>
+                </div>
+                <div id="NintendoMenuCategory" class="hover:bg-[#1F0A4D] flex"
+                    onmouseover="showDropdownMenu('dropdownNintendoMenu')"
+                    onmouseout="hiddeDropdownMenu('dropdownNintendoMenu')">
+                    <p class="pl-4 pr-1 py-3">Nintendo</p>
+                    <ion-icon class=" pt-[13px]" name="chevron-down-outline"></ion-icon>
+                </div>
+                <div class="hover:bg-[#1F0A4D]">
+                    <p class="px-4 py-3">Ideas para regalar</p>
+                </div>
+            </div>
+        </div>
+        <!--Menu depegable: Juegos -->
+        <div id="dropdownJuegosMenu" class="hidden"
+            onmouseover="showDropdownMenuIntoMenu('dropdownJuegosMenu', 'JuegosMenuCategory')"
+            onmouseout="hiddeDropdownMenuIntoMenu('dropdownJuegosMenu', 'JuegosMenuCategory')">
+            <div class="w-full bg-[#1F0A4D] pb-6  place-content-center">
+                <div class="pt-4 xl:px-48 lg:px-24 md:px-10 font-normal grid grid-cols-6 gap-2 text-white text-sm">
+                    <div>
+                        <p class="font-bold pb-2">Plataforma</p>
+                        <p>Steam Juegos</p>
+                        <p>Xbox Juegos</p>
+                        <p>Nintendo Switch Juegos</p>
+                        <p>Origin Juegos</p>
+                        <p>Ubisoft Connect Juegos</p>
+                        <p>Epic Games Juegos</p>
+                        <p>GOG Juegos</p>
+                        <p>Próximos Juegos</p>
+                        <p>DLCs</p>
+                        <p>Todos</p>
+                    </div>
+                    <div>
+                        <p class="font-bold pb-2">Géneros Populares</p>
+                        <p>Un solo jugador</p>
+                        <p>Multijugador</p>
+                        <p>Acción</p>
+                        <p>Primera Persona</p>
+                        <p>Tercera Persona</p>
+                        <p>Simulación</p>
+                        <p>Deportes</p>
+                        <p>Co-Op</p>
+                        <p>FPS / TPS</p>
+                        <p>Aventuras</p>
+                        <p>Estrategia</p>
+                        <p>Carreras</p>
+                    </div>
+                    <div>
+                        <p class="font-bold pb-2">Géneros de Nicho</p>
+                        <p>Indie</p>
+                        <p>RPG</p>
+                        <p>Vista Aérea</p>
+                        <p>Horror</p>
+                        <p>Realidad Virtual</p>
+                        <p>Plataforma</p>
+                        <p>Hack Slash</p>
+                        <p>Lucha</p>
+                        <p>Rompecabezas</p>
+                        <p>MMO</p>
+                        <p>Point & Click</p>
+                        <p>Arcade</p>
+                    </div>
+                    <div>
+                        <p class="font-bold pb-2">Descubre por colección</p>
+                        <p>Videojuegos populares</p>
+                        <p>Videojuegos antiguos</p>
+                        <p>Paquetes de Fortnite</p>
+                        <p>Skins y pavos para Fortnite</p>
+                        <p>Comprar Tarjetas PlayStation Network PSN</p>
+                        <p>Ofertas Steam</p>
+                        <p>Mejores juegos de PC</p>
+                        <p>Juegos en Oferta</p>
+                        <p>Juegos para niños</p>
+                    </div>
+                    <div>
+                        <p class="font-bold pb-2">Puntos de juegos</p>
+                        <p>Xbox Live Puntos</p>
+                        <p>Origin puntos</p>
+                        <p>FIFA FUT Points</p>
+                        <p>GTA Online Cash</p>
+                        <p>Riot Points</p>
+                        <p>Apex Coins</p>
+                        <p>Diamantes Garena Free Fire</p>
+                        <p>Diamantes Mobile Legends</p>
+                        <p>NBA VC</p>
+                        <p>PUBG UC</p>
+                        <p>Guild Wars 2 Gems</p>
+                        <p>Todos</p>
+                    </div>
+                    <div>
+                        <p class="font-bold pb-2">Descubrir por precio</p>
+                        <p>Juegos por menos de MX$10</p>
+                        <p>Juegos por menos de MX$20</p>
+                        <p>Juegos por menos de MX$50</p>
+                        <p>Juegos por menos de MX$100</p>
+                        <p>Juegos por menos de MX$250</p>
+                        <p>Juegos por menos de MX$500</p>
+                        <p>Juegos por más de MX$500</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--Menu depegable: Tarjetas de regalo -->
+        <div id="dropdownTDRMenu" class="hidden"
+            onmouseover="showDropdownMenuIntoMenu('dropdownTDRMenu', 'TDRMenuCategory')"
+            onmouseout="hiddeDropdownMenuIntoMenu('dropdownTDRMenu', 'TDRMenuCategory')">
+            <div class="w-full bg-[#1F0A4D] pb-6  place-content-center">
+                <div class="pt-4 xl:px-48 lg:px-24 md:px-10 font-normal grid grid-cols-6 gap-2 text-white text-sm">
+                    <div></div>
+                    <div>
+                        <p class="font-bold pb-2">Juegos tarjetas</p>
+                        <p>Steam Tarjetas</p>
+                        <p>Xbox Live Tarjetas</p>
+                        <p>PSN Tarjetas</p>
+                        <p>Nintendo eShop Tarjetas</p>
+                        <p>Pavos de Fortnite</p>
+                        <p>Roblox Robux</p>
+                        <p>Blizzard Tarjetas</p>
+                        <p>Google Play Tarjetas</p>
+                        <p>Tiempo de Juego Tarjetas</p>
+                        <p>Eneba Tarjetas</p>
+                        <p>Todos</p>
+                    </div>
+                    <div>
+                        <p class="font-bold pb-2">eTarjetas</p>
+                        <p>Amazon Tarjetas</p>
+                        <p>iTunes Tarjetas</p>
+                        <p>Netflix Tarjetas</p>
+                        <p>Spotify Tarjetas</p>
+                        <p>Discord Tarjetas</p>
+                        <p>Razer Gold Tarjetas</p>
+                        <p>Todos</p>
+                    </div>
+                    <div>
+                        <p class="font-bold pb-2">Tarjetas de regalo por precio</p>
+                        <p>Tarjetas de regalo por menos de MX$100</p>
+                        <p>Tarjetas regalo por menos de MX$250</p>
+                        <p>Tarjetas regalo por menos de MX$500</p>
+                        <p>Tarjetas regalo por más de MX$500</p>
+                    </div>
+                    <div>
+                        <p class="font-bold pb-2">Crypto</p>
+                        <p>Binance</p>
+                        <p>Bitnovo</p>
+                        <p>Crypto Voucher</p>
+                    </div>
+                    <div></div>
+                </div>
+            </div>
+        </div>
+        <!--Menu depegable: Xbox -->
+        <div id="dropdownXboxMenu" class="hidden"
+            onmouseover="showDropdownMenuIntoMenu('dropdownXboxMenu', 'XboxMenuCategory')"
+            onmouseout="hiddeDropdownMenuIntoMenu('dropdownXboxMenu', 'XboxMenuCategory')">
+            <div class="w-full bg-[#1F0A4D] pb-6  place-content-center">
+                <div class="pt-4 xl:px-48 lg:px-24 md:px-10 font-normal grid grid-cols-6 gap-2 text-white text-sm">
+                    <div></div>
+                    <div>
+                        <p class="font-bold pb-2">Xbox list</p>
+                        <p>Xbox Juegos</p>
+                        <p>Xbox Live Tarjetas</p>
+                        <p>Xbox Live Gold</p>
+                        <p>Xbox Game Pass</p>
+                        <p>Xbox Live Suscripciones</p>
+                        <p>Xbox Live Puntos</p>
+                        <p>Xbox Live DLCs</p>
+                        <p>Todos</p>
+                    </div>
+                    <div>
+                        <p class="font-bold pb-2">Suscripciones</p>
+                        <p>Game Pass 30</p>
+                        <p>Game Pass 90</p>
+                        <p>Game Pass PC 30</p>
+                        <p>Game Pass PC 90</p>
+                        <p>Game Pass Core 30</p>
+                        <p>Game Pass Core 90</p>
+                        <p>Game Pass Core 365</p>
+                        <p>Game Pass Ult. 30</p>
+                        <p>Game Pass Ult. 90</p>
+                    </div>
+                    <div>
+                        <p class="font-bold pb-2">Tarjetas de regalo por precio</p>
+                        <p>Tarjetas de regalo por menos de MX$100</p>
+                        <p>Tarjetas regalo por menos de MX$250</p>
+                        <p>Tarjetas regalo por menos de MX$500</p>
+                    </div>
+                    <div>
+                        <p class="font-bold pb-2">Juegos por precio</p>
+                        <p>Juegos por menos de MX$100</p>
+                        <p>Juegos por menos de MX$250</p>
+                        <p>Juegos por menos de MX$500</p>
+                        <p>Juegos por más de MX$500</p>
+                    </div>
+                    <div></div>
+                </div>
+            </div>
+        </div>
+        <!--Menu depegable: PSN -->
+        <div id="dropdownPSNMenu" class="hidden"
+            onmouseover="showDropdownMenuIntoMenu('dropdownPSNMenu', 'PSNMenuCategory')"
+            onmouseout="hiddeDropdownMenuIntoMenu('dropdownPSNMenu', 'PSNMenuCategory')">
+            <div class="w-full bg-[#1F0A4D] pb-6  place-content-center">
+                <div class="pt-4 xl:px-48 lg:px-24 md:px-10 font-normal grid grid-cols-6 gap-2 text-white text-sm">
+                    <div></div>
+                    <div>
+                        <p class="font-bold pb-2">PSN list</p>
+                        <p>PSN Tarjetas</p>
+                        <p>PSN Plus Suscripciones</p>
+                    </div>
+                    <div>
+                        <p class="font-bold pb-2">Suscripciones</p>
+                        <p>PSPlus90d_menu</p>
+                        <p>PSPlus365d_menu</p>
+                    </div>
+                    <div>
+                        <p class="font-bold pb-2">Tarjetas de regalo por precio</p>
+                        <p>Tarjetas regalo por menos de MX$250</p>
+                        <p>Tarjetas regalo por menos de MX$500</p>
+                        <p>Tarjetas regalo por más de MX$500</p>
+                    </div>
+
+                    <div></div>
+                    <div></div>
+                </div>
+            </div>
+        </div>
+        <!--Menu depegable: Nintendo -->
+        <div id="dropdownNintendoMenu" class="hidden"
+            onmouseover="showDropdownMenuIntoMenu('dropdownNintendoMenu', 'NintendoMenuCategory')"
+            onmouseout="hiddeDropdownMenuIntoMenu('dropdownNintendoMenu', 'NintendoMenuCategory')">
+            <div class="w-full bg-[#1F0A4D] pb-6  place-content-center">
+                <div class="pt-4 xl:px-48 lg:px-24 md:px-10 font-normal grid grid-cols-6 gap-2 text-white text-sm">
+                    <div></div>
+                    <div>
+                        <p class="font-bold pb-2">Nintendo list</p>
+                        <p>Nintendo eShop Tarjetas</p>
+                        <p>Nintendo Online Suscripciones</p>
+                    </div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                </div>
+            </div>
+        </div>
+        <!--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------->
+    </header>
+    <main>
+        <!------------------------------------ACTIVIDAD-3---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------->
+        <section class="flex" id="container-imgs">
+            <a href="#">
+                <img src="imgs/1.2.png" id="true" class="grow object-cover transition duration-500 ease-in-out">
+            </a>
+            <a href="#">
+                <img src="imgs/2.1.png" id="false"
+                    class="grow object-cover transition duration-500 ease-in-out hover:brightness-50">
+            </a>
+            <a href="#">
+                <img src="imgs/3.1.png" id="false"
+                    class="grow object-cover transition duration-500 ease-in-out hover:brightness-50">
+            </a>
+            <a href="#">
+                <img src="imgs/4.1.png" id="false"
+                    class="grow object-cover transition duration-500 ease-in-out hover:brightness-50">
+            </a>
+        </section>
+        <!--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------->
+        <!------------------------------------ACTIVIDAD-4---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------->
+        <div class="bg-indigo-800">
+            <div class="container mx-auto px-4 py-8">
+                <h2 class="text-4xl text-white font-bold mb-6">Lo que te recomendamos</h2>
+                <div class="grid grid-cols-1 md:grid-cols-5 gap-4">
+                    <!-- Producto 1 -->
+                    <div class="bg-white overflow-hidden shadow-xl">
+                        <img class="w-full"
+                            src="https://cdn-products.eneba.com/resized-products/vjxMRXqytUWZFjqdcE4omdxbnBquV3_ARcgP66A5j2M_350x200_1x-0.jpg"
+                            alt="Brawl Stars">
+                        <div class="p-4">
+                            <p class="text-lg font-semibold">Brawl Stars Gems</p>
+                            <p class="text-gray-500">Desde 49,00 MXN</p>
+                            <p class="text-gray-500">10% de Cashback</p>
+                            <div class="flex justify-between items-center mt-4">
+                                <span class="text-gray-700 text-sm">3927 ♥</span>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Producto 2 -->
+                    <div class="bg-white overflow-hidden shadow-xl">
+                        <img class="w-full"
+                            src="https://cdn-products.eneba.com/resized-products/4uEOUzCDKjRV2Yj-Bq8GWYtvU4OItRqGTSwVZa2cNaM_350x200_1x-0.jpg"
+                            alt="Brawl Stars">
+                        <div class="p-4">
+                            <p class="text-lg font-semibold">Call of Duty®: Modern Warfare® II - Gunslinger Ghost (DLC)
+                                Código de XBOX LIVE ARGENTINA</p>
+                            <p class="text-gray-500">Desde 247,37 MXN</p>
+                            <p class="text-gray-500">10% de Cashback</p>
+                            <div class="flex justify-between items-center mt-4">
+                                <span class="text-gray-700 text-sm">4613 ♥</span>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Producto 3 -->
+                    <div class="bg-white overflow-hidden shadow-xl">
+                        <img class="w-full"
+                            src="https://cdn-products.eneba.com/resized-products/_7SLC6Sn_bzOXwHWWOOcT0SKxyX2Ofj6o-rDvRJeyyk_350x200_1x-0.jpg"
+                            alt="Brawl Stars">
+                        <div class="p-4">
+                            <p class="text-lg font-semibold">(DLC)Fortnite - Voidlands Exile Quest Pack + 1,000 V-Bucks
+                                Challenge XBOX LIVE Key ARGENTINA</p>
+                            <p class="text-gray-500">Desde 53,84 MXN</p>
+                            <p class="text-gray-500">10% de Cashback</p>
+                            <div class="flex justify-between items-center mt-4">
+                                <span class="text-gray-700 text-sm">18459 ♥</span>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Producto 4 -->
+                    <div class="bg-white overflow-hidden shadow-xl">
+                        <img class="w-full"
+                            src="https://cdn-products.eneba.com/resized-products/Dbdx7ihzJk48bASi_G0jHEgx2obfGYE_tNyWsjtJ4a4_350x200_1x-0.png"
+                            alt="Brawl Stars">
+                        <div class="p-4">
+                            <p class="text-lg font-semibold">Minecraft: Java & Bedrock Edition Official website Key
+                                GLOBAL</p>
+                            <p class="text-gray-500">Desde 439,82 MXN</p>
+                            <p class="text-gray-500">10% de Cashback</p>
+                            <div class="flex justify-between items-center mt-4">
+                                <span class="text-gray-700 text-sm">19738 ♥</span>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Producto 5 -->
+                    <div class="bg-white overflow-hidden shadow-xl">
+                        <img class="w-full"
+                            src="https://cdn-products.eneba.com/resized-products/xJoRciyvTE6BJb4uij7DAamdUZXM_Rx681Xednds0tk_350x200_1x-0.jpg"
+                            alt="Brawl Stars">
+                        <div class="p-4">
+                            <p class="text-lg font-semibold">(DLC) Destiny 2: Lightfall (DLC) Código de Steam GLOBAL</p>
+                            <p class="text-gray-500">Desde 366,31 MXN</p>
+                            <p class="text-gray-500">10% de Cashback</p>
+                            <div class="flex justify-between items-center mt-4">
+                                <span class="text-gray-700 text-sm">479 ♥</span>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Producto 6 -->
+                    <div class="bg-white overflow-hidden shadow-xl">
+                        <img class="w-full"
+                            src="https://cdn-products.eneba.com/resized-products/WKZ0YNVqSyXEUR_YvMgypS1XlzQsCg0ndMVf8nYDFnw_350x200_1x-0.jpeg"
+                            alt="Brawl Stars">
+                        <div class="p-4">
+                            <p class="text-lg font-semibold">Disney Epic Mickey 2: The Power of Two Steam Key GLOBAL</p>
+                            <p class="text-gray-500">Desde 201,94 MXN</p>
+                            <p class="text-gray-500">10% de Cashback</p>
+                            <div class="flex justify-between items-center mt-4">
+                                <span class="text-gray-700 text-sm">2294 ♥</span>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Producto 7 -->
+                    <div class="bg-white overflow-hidden shadow-xl">
+                        <img class="w-full"
+                            src="https://cdn-products.eneba.com/resized-products/0ff95caa292a8628a30931c4ba36db76_350x200_1x-0.jpg"
+                            alt="Brawl Stars">
+                        <div class="p-4">
+                            <p class="text-lg font-semibold">Grand Theft Auto: San Andreas Steam Key GLOBAL</p>
+                            <p class="text-gray-500">Desde 2749,83 MXN</p>
+                            <p class="text-gray-500">10% de Cashback</p>
+                            <div class="flex justify-between items-center mt-4">
+                                <span class="text-gray-700 text-sm">19270 ♥</span>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Producto 8 -->
+                    <div class="bg-white overflow-hidden shadow-xl">
+                        <img class="w-full"
+                            src="https://cdn-products.eneba.com/resized-products/6M1qP76B-j6vdX0T4bFCHgJeX99MaKBpXFxbpif1MqY_350x200_1x-0.jpeg"
+                            alt="Brawl Stars">
+                        <div class="p-4">
+                            <p class="text-lg font-semibold">Red Dead Redemption 2 Rockstar Games Launcher Clave GLOBAL
+                            </p>
+                            <p class="text-gray-500">Desde 421,40 MXN</p>
+                            <p class="text-gray-500">10% de Cashback</p>
+                            <div class="flex justify-between items-center mt-4">
+                                <span class="text-gray-700 text-sm">11077 ♥</span>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Producto 9 -->
+                    <div class="bg-white overflow-hidden shadow-xl">
+                        <img class="w-full"
+                            src="https://cdn-products.eneba.com/resized-products/bXRUUblXKR-BlXnSIsUVR-jrJ1lnCSGA9qgbLh5L10Y_350x200_1x-0.jpg"
+                            alt="Brawl Stars">
+                        <div class="p-4">
+                            <p class="text-lg font-semibold">HELLDIVERS 2 (PC) Código de Steam GLOBAL</p>
+                            <p class="text-gray-500">Desde 641,40 MXN</p>
+                            <p class="text-gray-500">10% de Cashback</p>
+                            <div class="flex justify-between items-center mt-4">
+                                <span class="text-gray-700 text-sm">4104 ♥</span>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Producto 10 -->
+                    <div class="bg-white overflow-hidden shadow-xl">
+                        <img class="w-full"
+                            src="https://cdn-products.eneba.com/resized-products/qx8Tbt_P4s0CUWhUi0zXERfNW1s7_qGS5WbBO_uVudI_350x200_1x-0.jpeg"
+                            alt="Brawl Stars">
+                        <div class="p-4">
+                            <p class="text-lg font-semibold">Elden Ring (PC) Código de Steam GLOBAL</p>
+                            <p class="text-gray-500">Desde 667,51 MXN</p>
+                            <p class="text-gray-500">10% de Cashback</p>
+                            <div class="flex justify-between items-center mt-4">
+                                <span class="text-gray-700 text-sm">9527 ♥</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="text-center mt-8">
+                    <a href="./Actividad5.html"
+                        class="text-white bg-transparent border border-white rounded py-2 px-4 hover:bg-white hover:text-purple-600 transition duration-300">
+                        Ver todo
+                    </a>
+                </div>
+            </div>
+        </div>
+        <!--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------->
+        <!------------------------------------ACTIVIDAD-6---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------->
+        <div class="bg-violet-800">
+            <div class="container mx-auto px-20 py-12 scrollbar-thin scrollbar-track-gray-500 scrollbar-thumb-gray-700">
+                <label class="text-2xl font-bold">Los mejores juegos(Digital)</label><br><br>
+                <ul
+                    class="flex overflow-x-auto gap-6 snap-x snap-mandatory before:shrink-0 before:w-[1vw] after:shrink-0 after:w-[1vw]">
+                    <li class="shrink-0 snap-center ">
+                        <div class="card bg-black h-96 m-4 flex flex-col justify-end bg-cover bg-center transition duration-300 ease-in-out transform hover:shadow-slate-900 hover:shadow-inner hover:bg-opacity-80 mx-auto hover:brightness-50"
+                            style="background-image: url('./imgs/t6_1.webp');">
+                            <h2 id="title1"
+                                class="title text-base font-bold text-left mt-3 py-2 px-4 w-60 bg-[#1F0A4D] text-[#DCD8D8]">
+                                Minecraft: Java & Bedrock Edition Official website Key GLOBAL</h2>
+                            <p class="title text-base font-bold text-left px-4 w-60 bg-[#1F0A4D] text-emerald-500">
+                                GLOBAL</p>
+                            <p class="title text-base font-bold text-left px-4 w-60 bg-[#1F0A4D] text-[#DCD8D8]">Desde
+                            </p>
+                            <p class="title text-base font-bold text-left px-4 w-60 bg-[#1F0A4D] text-[#DCD8D8]">325,48
+                                MXN</p>
+                            <div class="flex items-center">
+                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                                    stroke-width="1.5" stroke="currentColor" class="bg-[#1F0A4D] w-8 h-9">
+                                    <path stroke-linecap="round" stroke-linejoin="round"
+                                        d="M21 8.25c0-2.485-2.099-4.5-4.688-4.5-1.935 0-3.597 1.126-4.312 2.733-.715-1.607-2.377-2.733-4.313-2.733C5.1 3.75 3 5.765 3 8.25c0 7.22 9 12 9 12s9-4.78 9-12Z" />
+                                </svg>
+                                <p class="title text-base font-bold text-left w-52 h-9 bg-[#1F0A4D] text-[#DCD8D8]">
+                                    721,168</p>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="shrink-0 snap-center">
+                        <div class="card bg-black h-96 m-4 flex flex-col justify-end bg-cover bg-center transition duration-300 ease-in-out transform hover:shadow-slate-900 hover:shadow-inner hover:bg-opacity-80 mx-auto hover:brightness-50"
+                            style="background-image: url('./imgs/t6_3.jpg');">
+                            <h2 id="title1"
+                                class="title text-base font-bold text-left mt-3 py-2 px-4 w-60 bg-[#1F0A4D] text-[#DCD8D8]">
+                                HELLDIVERS 2 (PC) Código de Steam GLOBA</h2>
+                            <p class="title text-base font-bold text-left px-4 w-60 bg-[#1F0A4D] text-emerald-500">
+                                GLOBAL</p>
+                            <p class="title text-base font-bold text-left px-4 w-60 bg-[#1F0A4D] text-[#DCD8D8]">Desde
+                            </p>
+                            <p class="title text-base font-bold text-left px-4 w-60 bg-[#1F0A4D] text-[#DCD8D8]">640,48
+                                MXN</p>
+                            <div class="flex items-center">
+                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                                    stroke-width="1.5" stroke="currentColor" class="bg-[#1F0A4D] w-8 h-9">
+                                    <path stroke-linecap="round" stroke-linejoin="round"
+                                        d="M21 8.25c0-2.485-2.099-4.5-4.688-4.5-1.935 0-3.597 1.126-4.312 2.733-.715-1.607-2.377-2.733-4.313-2.733C5.1 3.75 3 5.765 3 8.25c0 7.22 9 12 9 12s9-4.78 9-12Z" />
+                                </svg>
+                                <p class="title text-base font-bold text-left w-52 h-9 bg-[#1F0A4D] text-[#DCD8D8]">
+                                    721,168</p>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="shrink-0 snap-center">
+                        <div class="card bg-black h-96 m-4 flex flex-col justify-end bg-cover bg-center transition duration-300 ease-in-out transform hover:shadow-slate-900 hover:shadow-inner hover:bg-opacity-80 mx-auto hover:brightness-50"
+                            style="background-image: url('./imgs/t6_4.webp');">
+                            <h2 id="title1"
+                                class="title text-base font-bold text-left mt-3 py-2 px-4 w-60 bg-[#1F0A4D] text-[#DCD8D8]">
+                                Afterimage (PC) Código de Steam GLOBAL</h2>
+                            <p class="title text-base font-bold text-left px-4 w-60 bg-[#1F0A4D] text-emerald-500">
+                                GLOBAL</p>
+                            <p class="title text-base font-bold text-left px-4 w-60 bg-[#1F0A4D] text-[#DCD8D8]">Desde
+                            </p>
+                            <p class="title text-base font-bold text-left px-4 w-60 bg-[#1F0A4D] text-[#DCD8D8]">142,48
+                                MXN</p>
+                            <div class="flex items-center">
+                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                                    stroke-width="1.5" stroke="currentColor" class="bg-[#1F0A4D] w-8 h-9">
+                                    <path stroke-linecap="round" stroke-linejoin="round"
+                                        d="M21 8.25c0-2.485-2.099-4.5-4.688-4.5-1.935 0-3.597 1.126-4.312 2.733-.715-1.607-2.377-2.733-4.313-2.733C5.1 3.75 3 5.765 3 8.25c0 7.22 9 12 9 12s9-4.78 9-12Z" />
+                                </svg>
+                                <p class="title text-base font-bold text-left w-52 h-9 bg-[#1F0A4D] text-[#DCD8D8]">
+                                    721,168</p>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="shrink-0 snap-center">
+                        <div class="card bg-black h-96 m-4 flex flex-col justify-end bg-cover bg-center transition duration-300 ease-in-out transform hover:shadow-slate-900 hover:shadow-inner hover:bg-opacity-80 mx-auto hover:brightness-50"
+                            style="background-image: url('./imgs/t6_5.jpeg');">
+                            <h2 id="title1"
+                                class="title text-base font-bold text-left mt-3 py-2 px-4 w-60 bg-[#1F0A4D] text-[#DCD8D8]">
+                                Grand Theft Auto V: Edición Online Premium</h2>
+                            <p class="title text-base font-bold text-left px-4 w-60 bg-[#1F0A4D] text-emerald-500">
+                                GLOBAL</p>
+                            <p class="title text-base font-bold text-left px-4 w-60 bg-[#1F0A4D] text-[#DCD8D8]">Desde
+                            </p>
+                            <p class="title text-base font-bold text-left px-4 w-60 bg-[#1F0A4D] text-[#DCD8D8]">182,48
+                                MXN</p>
+                            <div class="flex items-center">
+                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                                    stroke-width="1.5" stroke="currentColor" class="bg-[#1F0A4D] w-8 h-9">
+                                    <path stroke-linecap="round" stroke-linejoin="round"
+                                        d="M21 8.25c0-2.485-2.099-4.5-4.688-4.5-1.935 0-3.597 1.126-4.312 2.733-.715-1.607-2.377-2.733-4.313-2.733C5.1 3.75 3 5.765 3 8.25c0 7.22 9 12 9 12s9-4.78 9-12Z" />
+                                </svg>
+                                <p class="title text-base font-bold text-left w-52 h-9 bg-[#1F0A4D] text-[#DCD8D8]">
+                                    721,168</p>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="shrink-0 snap-center">
+                        <div class="card bg-black h-96 m-4 flex flex-col justify-end bg-cover bg-center transition duration-300 ease-in-out transform hover:shadow-slate-900 hover:shadow-inner hover:bg-opacity-80 mx-auto hover:brightness-50"
+                            style="background-image: url('./imgs/t6_6.jpeg');">
+                            <h2 id="title1"
+                                class="title text-base font-bold text-left mt-3 py-2 px-4 w-60 bg-[#1F0A4D] text-[#DCD8D8]">
+                                Red Dead Redemption 2 Rockstar Games</h2>
+                            <p class="title text-base font-bold text-left px-4 w-60 bg-[#1F0A4D] text-emerald-500">
+                                GLOBAL</p>
+                            <p class="title text-base font-bold text-left px-4 w-60 bg-[#1F0A4D] text-[#DCD8D8]">Desde
+                            </p>
+                            <p class="title text-base font-bold text-left px-4 w-60 bg-[#1F0A4D] text-[#DCD8D8]">420,48
+                                MXN</p>
+                            <div class="flex items-center">
+                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                                    stroke-width="1.5" stroke="currentColor" class="bg-[#1F0A4D] w-8 h-9">
+                                    <path stroke-linecap="round" stroke-linejoin="round"
+                                        d="M21 8.25c0-2.485-2.099-4.5-4.688-4.5-1.935 0-3.597 1.126-4.312 2.733-.715-1.607-2.377-2.733-4.313-2.733C5.1 3.75 3 5.765 3 8.25c0 7.22 9 12 9 12s9-4.78 9-12Z" />
+                                </svg>
+                                <p class="title text-base font-bold text-left w-52 h-9 bg-[#1F0A4D] text-[#DCD8D8]">
+                                    721,168</p>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="shrink-0 snap-center">
+                        <div class="card bg-black h-96 m-4 flex flex-col justify-end bg-cover bg-center transition duration-300 ease-in-out transform hover:shadow-slate-900 hover:shadow-inner hover:bg-opacity-80 mx-auto hover:brightness-50"
+                            style="background-image: url('./imgs/t6_7.jpeg');">
+                            <h2 id="title1"
+                                class="title text-base font-bold text-left mt-3 py-2 px-4 w-60 bg-[#1F0A4D] text-[#DCD8D8]">
+                                God of War (PC) Código de Steam LATAM</h2>
+                            <p class="title text-base font-bold text-left px-4 w-60 bg-[#1F0A4D] text-emerald-500">
+                                GLOBAL</p>
+                            <p class="title text-base font-bold text-left px-4 w-60 bg-[#1F0A4D] text-[#DCD8D8]">Desde
+                            </p>
+                            <p class="title text-base font-bold text-left px-4 w-60 bg-[#1F0A4D] text-[#DCD8D8]">631,48
+                                MXN</p>
+                            <div class="flex items-center">
+                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                                    stroke-width="1.5" stroke="currentColor" class="bg-[#1F0A4D] w-8 h-9">
+                                    <path stroke-linecap="round" stroke-linejoin="round"
+                                        d="M21 8.25c0-2.485-2.099-4.5-4.688-4.5-1.935 0-3.597 1.126-4.312 2.733-.715-1.607-2.377-2.733-4.313-2.733C5.1 3.75 3 5.765 3 8.25c0 7.22 9 12 9 12s9-4.78 9-12Z" />
+                                </svg>
+                                <p class="title text-base font-bold text-left w-52 h-9 bg-[#1F0A4D] text-[#DCD8D8]">
+                                    721,168</p>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="shrink-0 snap-center">
+                        <div class="card bg-black h-96 m-4 flex flex-col justify-end bg-cover bg-center transition duration-300 ease-in-out transform hover:shadow-slate-900 hover:shadow-inner hover:bg-opacity-80 mx-auto hover:brightness-50"
+                            style="background-image: url('./imgs/t6_8.jpg');">
+                            <h2 id="title1"
+                                class="title text-base font-bold text-left mt-3 py-2 px-4 w-60 bg-[#1F0A4D] text-[#DCD8D8]">
+                                The Last of Us Part I (PC) Código de Steam</h2>
+                            <p class="title text-base font-bold text-left px-4 w-60 bg-[#1F0A4D] text-emerald-500">
+                                GLOBAL</p>
+                            <p class="title text-base font-bold text-left px-4 w-60 bg-[#1F0A4D] text-[#DCD8D8]">Desde
+                            </p>
+                            <p class="title text-base font-bold text-left px-4 w-60 bg-[#1F0A4D] text-[#DCD8D8]">1089,48
+                                MXN</p>
+                            <div class="flex items-center">
+                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                                    stroke-width="1.5" stroke="currentColor" class="bg-[#1F0A4D] w-8 h-9">
+                                    <path stroke-linecap="round" stroke-linejoin="round"
+                                        d="M21 8.25c0-2.485-2.099-4.5-4.688-4.5-1.935 0-3.597 1.126-4.312 2.733-.715-1.607-2.377-2.733-4.313-2.733C5.1 3.75 3 5.765 3 8.25c0 7.22 9 12 9 12s9-4.78 9-12Z" />
+                                </svg>
+                                <p class="title text-base font-bold text-left w-52 h-9 bg-[#1F0A4D] text-[#DCD8D8]">
+                                    721,168</p>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="shrink-0 snap-center">
+                        <div class="card bg-black h-96 m-4 flex flex-col justify-end bg-cover bg-center transition duration-300 ease-in-out transform hover:shadow-slate-900 hover:shadow-inner hover:bg-opacity-80 mx-auto hover:brightness-50"
+                            style="background-image: url('./imgs/t6_9.jpg');">
+                            <h2 id="title1"
+                                class="title text-base font-bold text-left mt-3 py-2 px-4 w-60 bg-[#1F0A4D] text-[#DCD8D8]">
+                                Marvel's Spider-Man Remastered (PC)</h2>
+                            <p class="title text-base font-bold text-left px-4 w-60 bg-[#1F0A4D] text-emerald-500">
+                                GLOBAL</p>
+                            <p class="title text-base font-bold text-left px-4 w-60 bg-[#1F0A4D] text-[#DCD8D8]">Desde
+                            </p>
+                            <p class="title text-base font-bold text-left px-4 w-60 bg-[#1F0A4D] text-[#DCD8D8]">518,48
+                                MXN</p>
+                            <div class="flex items-center">
+                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                                    stroke-width="1.5" stroke="currentColor" class="bg-[#1F0A4D] w-8 h-9">
+                                    <path stroke-linecap="round" stroke-linejoin="round"
+                                        d="M21 8.25c0-2.485-2.099-4.5-4.688-4.5-1.935 0-3.597 1.126-4.312 2.733-.715-1.607-2.377-2.733-4.313-2.733C5.1 3.75 3 5.765 3 8.25c0 7.22 9 12 9 12s9-4.78 9-12Z" />
+                                </svg>
+                                <p class="title text-base font-bold text-left w-52 h-9 bg-[#1F0A4D] text-[#DCD8D8]">
+                                    721,168</p>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <!--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------->
+        <!------------------------------------ACTIVIDAD-7---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------->
+        <div class="bg-indigo-800">
+            <div class="container mx-auto px-4 py-8">
+                <div
+                    class="container mx-auto px-20 py-12 scrollbar-thin scrollbar-track-gray-500 scrollbar-thumb-gray-700">
+                    <label class="text-2xl font-bold">Recargas directas</label><br><br>
+                    <ul
+                        class="flex overflow-x-auto gap-6 snap-x snap-mandatory before:shrink-0 before:w-[1vw] after:shrink-0 after:w-[1vw]">
+                        <li class="shrink-0 snap-center">
+                            <div class="card bg-black h-96 m-4 flex flex-col justify-end bg-cover bg-center transition duration-300 ease-in-out transform hover:shadow-slate-900 hover:shadow-inner hover:bg-opacity-80 mx-auto hover:brightness-50"
+                                style="background-image: url('./imgs/1.jpg');">
+                                <div class="bg-[#63e3a4] w-36">
+                                    <h2 class="title text-sm font-bold py-1 px-4 text-[#000]">
+                                        DE CASHBACK
+                                    </h2>
+                                </div>
+                                <h2 id="title1"
+                                    class="title text-lg font-bold text-left mt-3 py-4 px-4 w-60 bg-[#1F0A4D] text-[#DCD8D8]">
+                                    Genshin Impact Genesis Crystals
+                                </h2>
+                            </div>
+                        </li>
+                        <li class="shrink-0 snap-center">
+                            <div class="card bg-gray-200 h-96 m-4  flex flex-col justify-end bg-cover bg-center transition duration-300 ease-in-out transform hover:shadow-slate-900 hover:shadow-inner hover:bg-opacity-50 mx-auto hover:brightness-50"
+                                style="background-image: url('./imgs/2.jpg');">
+                                <!-- Contenido de la tarjeta -->
+                                <div class="bg-[#63e3a4] w-36">
+                                    <h2 class="title text-sm font-bold py-1 px-4 text-[#000]">
+                                        DE CASHBACK
+                                    </h2>
+                                </div>
+                                <h2 id="title2"
+                                    class="title text-lg font-bold text-left mt-3 py-4 px-4 w-60 bg-[#1F0A4D] text-[#DCD8D8]">
+                                    Clash of clans gems
+                                </h2>
+                            </div>
+                        </li>
+                        <li class="shrink-0 snap-center">
+                            <div class="card bg-gray-200 h-96 m-4  flex flex-col justify-end bg-cover bg-center transition duration-300 ease-in-out transform hover:shadow-slate-900 hover:shadow-inner hover:bg-opacity-80 mx-auto hover:brightness-50"
+                                style="background-image: url('./imgs/3.jpg');">
+                                <!-- Contenido de la tarjeta -->
+                                <div class="bg-[#63e3a4] w-36">
+                                    <h2 class="title text-sm font-bold py-1 px-4 text-[#000]">
+                                        DE CASHBACK
+                                    </h2>
+                                </div>
+                                <h2 id="title3"
+                                    class="title text-lg font-bold text-left py-4 mt-3 px-4 w-60 bg-[#1F0A4D] text-[#DCD8D8]">
+                                    Ml Diamons
+                                </h2>
+                            </div>
+                        </li>
+                        <li class="shrink-0 snap-center">
+                            <div class="card bg-gray-200 h-96 m-4  flex flex-col justify-end bg-cover bg-center transition duration-300 ease-in-out transform hover:shadow-slate-900 hover:shadow-inner hover:bg-opacity-80 mx-auto hover:brightness-50"
+                                style="background-image: url('./imgs/4.jpg');">
+                                <!-- Contenido de la tarjeta -->
+                                <div class="bg-[#63e3a4] w-36">
+                                    <h2 class="title text-sm font-bold py-1 px-4 text-[#000]">
+                                        DE CASHBACK
+                                    </h2>
+                                </div>
+                                <h2 id="title4"
+                                    class="title text-lg font-bold text-left py-4 mt-3 px-4 w-60 bg-[#1F0A4D] text-[#DCD8D8]">
+                                    Brawl Stars Gems
+                                </h2>
+                            </div>
+                        </li>
+                        <li class="shrink-0 snap-center">
+                            <div class="card bg-gray-200 h-96 m-4  flex flex-col justify-end bg-cover bg-center transition duration-300 ease-in-out transform hover:shadow-slate-900 hover:shadow-inner hover:bg-opacity-80 mx-auto hover:brightness-50"
+                                style="background-image: url('./imgs/5.jpg');">
+                                <!-- Contenido de la tarjeta -->
+                                <div class="bg-[#63e3a4] w-36">
+                                    <h2 class="title text-sm font-bold py-1 px-4 text-[#000]">
+                                        DE CASHBACK
+                                    </h2>
+                                </div>
+                                <h2 id="title5"
+                                    class="title text-lg font-bold text-left py-4 mt-3 px-4 w-60 bg-[#1F0A4D] text-[#DCD8D8]">
+                                    Bigo Live Diamond
+                                </h2>
+                            </div>
+                        </li>
+                        <li class="shrink-0 snap-center">
+                            <div class="card bg-gray-200 h-96 m-4  flex flex-col justify-end bg-cover bg-center transition duration-300 ease-in-out transform hover:shadow-slate-900 hover:shadow-inner hover:bg-opacity-80 mx-auto hover:brightness-50"
+                                style="background-image: url('./imgs/6.jpg');">
+                                <!-- Contenido de la tarjeta -->
+                                <div class="bg-[#63e3a4] w-36">
+                                    <h2 class="title text-sm font-bold py-1 px-4 text-[#000]">
+                                        DE CASHBACK
+                                    </h2>
+                                </div>
+                                <h2 id="title6"
+                                    class="title text-lg font-bold text-left py-4 mt-3 px-4 w-60 bg-[#1F0A4D] text-[#DCD8D8]">
+                                    Free Fire Diamons
+                                </h2>
+                            </div>
+                        </li>
+                        <li class="shrink-0 snap-center">
+                            <div class="card bg-gray-200 h-96 m-4  flex flex-col justify-end bg-cover bg-center transition duration-300 ease-in-out transform hover:shadow-slate-900 hover:shadow-inner hover:bg-opacity-80 mx-auto hover:brightness-50"
+                                style="background-image: url('./imgs/8.png');">
+                                <!-- Contenido de la tarjeta -->
+                                <div class="bg-[#63e3a4] w-36">
+                                    <h2 class="title text-sm font-bold py-1 px-4 text-[#000]">
+                                        DE CASHBACK
+                                    </h2>
+                                </div>
+                                <h2 id="title7"
+                                    class="title text-lg font-bold text-left py-4 mt-3 px-4 w-60 bg-[#1F0A4D] text-[#DCD8D8]">
+                                    PUBG Mobile UC
+                                </h2>
+                            </div>
+                        </li>
+                        <li class="shrink-0 snap-center">
+                            <div class="card bg-gray-200 h-96 m-4  flex flex-col justify-end bg-cover bg-center transition duration-300 ease-in-out transform hover:shadow-slate-900 hover:shadow-inner hover:bg-opacity-80 mx-auto hover:brightness-50"
+                                style="background-image: url('./imgs/7.jpg');">
+                                <!-- Contenido de la tarjeta -->
+                                <div class="bg-[#63e3a4] w-36">
+                                    <h2 class="title text-sm font-bold py-1 px-4 text-[#000]">
+                                        DE CASHBACK
+                                    </h2>
+                                </div>
+                                <h2 id="title8"
+                                    class="title text-lg font-bold text-left py-4 mt-3 px-4 w-60 bg-[#1F0A4D] text-[#DCD8D8]">
+                                    Witeout Frost Star
+                                </h2>
+                            </div>
+                        </li>
+                        <li class="shrink-0 snap-center">
+                            <div class="card bg-gray-200 h-96 m-4  flex flex-col justify-end bg-cover bg-center transition duration-300 ease-in-out transform hover:shadow-slate-900 hover:shadow-inner hover:bg-opacity-80 mx-auto hover:brightness-50"
+                                style="background-image: url('./imgs/9.jpg');">
+                                <!-- Contenido de la tarjeta -->
+                                <div class="bg-[#63e3a4] w-36">
+                                    <h2 class="title text-sm font-bold py-1 px-4 text-[#000]">
+                                        DE CASHBACK
+                                    </h2>
+                                </div>
+                                <h2 id="title9"
+                                    class="title text-lg font-bold text-left py-4 mt-3 px-4 w-60 bg-[#1F0A4D] text-[#DCD8D8]">
+                                    Stumble Guys Gems
+                                </h2>
+                            </div>
+                        </li>
+                        <li class="shrink-0 snap-center">
+                            <div class="card bg-gray-200 h-96 m-4  flex flex-col justify-end bg-cover bg-center transition duration-300 ease-in-out transform hover:shadow-slate-900 hover:shadow-inner hover:bg-opacity-80 mx-auto hover:brightness-50"
+                                style="background-image: url('./imgs/10.jpg');">
+                                <!-- Contenido de la tarjeta -->
+                                <div class="bg-[#63e3a4] w-36">
+                                    <h2 class="title text-sm font-bold py-1 px-4 text-[#000]">
+                                        DE CASHBACK
+                                    </h2>
+                                </div>
+                                <h2 id="title10"
+                                    class="title text-lg font-bold text-left py-4 mt-3 px-4 w-60 bg-[#1F0A4D] text-[#DCD8D8]">
+                                    Goddes of Victory: Nikke Gems
+                                </h2>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+                <div class="text-center mt-8">
+                    <a href="./Actividad8-9-10.html"
+                        class="text-white bg-transparent border border-white rounded py-2 px-4 hover:bg-white hover:text-purple-600 transition duration-300">
+                        Ver todo
+                    </a>
+                </div>
+            </div>
+        </div>
+        <!--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------->
+        <!------------------------------------ACTIVIDAD-11--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------->
+        <div class="flex bg-violet-800">
+            <div class="flex-auto mx-auto max-w-screen-xl">
+                <h1 class="text-white text-4xl">
+                    Productos de renovacion automatica
+                </h1>
+                <div class="carousel-container relative mt-7">
+                    <!-- Left Button -->
+                    <button
+                        class="scroll-btn left-0 absolute h-16 w-16 right-0 z-10 inset-y-0 my-auto bg-gray-200 p-2 shadow-md text-purple-900 text-2xl font-bold hover:bg-white focus:outline-none focus:ring-2 focus:ring-purple-600 focus:ring-opacity-50"
+                        onclick="scrollCarousel(-1)">
+                        ❮
+                    </button>
+                    <!-- Carrusel de tarjetas -->
+                    <div id="carousel"
+                        class="flex overflow-x-hidden hover:overflow-x-auto scrollbar-thin scrollbar-thumb-rounded scrollbar-thumb-gray-400">
+                        <div
+                            class="flex-none w-64 h-content rounded overflow-hidden shadow-lg bg-purple-900 text-white m-2">
+                            <div class="w-64 h-content rounded overflow-hidden shadow-lg bg-purple-900 text-white">
+                                <img class="w-full h-64 object-cover object-center"
+                                    src="https://cdn-products.eneba.com/resized-products/_4rpstQRtsSs-r3m455DZnIxL6qS6pff-W6PtHQCHpk_350x200_1x-0.jpeg"
+                                    alt="Game Pass" />
+                                <div class="px-6 pt-4">
+                                    <div class="font-bold text-sm mb-1">
+                                        Xbox Game Pass Ultimate 1 Month Subscription Xbox...
+                                    </div>
+                                    <p class="text-green-500 font-bold">MEXICO</p>
+                                </div>
+                                <div class="px-6">
+                                    <p class="rounded text-sm font-semibold text-gray-400">
+                                        Desde
+                                    </p>
+                                    <span class="inline-block rounded text-2xl font-bold mb-2">151,67 MXN</span>
+                                </div>
+                                <div class="flex items-center px-6 pb-4">
+                                    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-red-500"
+                                        fill="currentColor" viewBox="0 0 24 24" stroke="none">
+                                        <path
+                                            d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z" />
+                                    </svg>
+                                    <span class="text-sm font-semibold text-white mr-2">8558</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div
+                            class="flex-none w-64 h-content rounded overflow-hidden shadow-lg bg-purple-900 text-white m-2">
+                            <div class="w-64 h-content rounded overflow-hidden shadow-lg bg-purple-900 text-white">
+                                <img class="w-full h-64 object-cover object-center"
+                                    src="https://cdn-products.eneba.com/resized-products/oGbTesYfJxaB-_hJcv1vbQXPo-9T06iSegrF4auMaE8_350x200_1x-0.jpg"
+                                    alt="Game Pass" />
+                                <div class="px-6 pt-4">
+                                    <div class="font-bold text-sm mb-1">
+                                        Game pass de 1 mes disponible en todas partes
+                                    </div>
+                                    <p class="text-green-500 font-bold">GLOBAL</p>
+                                </div>
+                                <div class="px-6">
+                                    <p class="rounded text-sm font-semibold text-gray-400">
+                                        Desde
+                                    </p>
+                                    <span class="inline-block rounded text-2xl font-bold mb-2">10 MXN</span>
+                                </div>
+                                <div class="flex items-center px-6 pb-4">
+                                    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-red-500"
+                                        fill="currentColor" viewBox="0 0 24 24" stroke="none">
+                                        <path
+                                            d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z" />
+                                    </svg>
+                                    <span class="text-sm font-semibold text-white mr-2">9999</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div
+                            class="flex-none w-64 h-content rounded overflow-hidden shadow-lg bg-purple-900 text-white m-2">
+                            <div class="w-64 h-content rounded overflow-hidden shadow-lg bg-purple-900 text-white">
+                                <img class="w-full h-64 object-cover object-center"
+                                    src="https://cdn-products.eneba.com/resized-products/a1twxNHScUV4nHqGtArPBC_O5bHO2a5n1pRXgK0Wj30_350x200_1x-0.jpeg"
+                                    alt="Game Pass" />
+                                <div class="px-6 pt-4">
+                                    <div class="font-bold text-sm mb-1">
+                                        Xbox Game Pass Ultimate 1 Mes de Suscripcion
+                                    </div>
+                                    <p class="text-green-500 font-bold">MEXICO</p>
+                                </div>
+                                <div class="px-6">
+                                    <p class="rounded text-sm font-semibold text-gray-400">
+                                        Desde
+                                    </p>
+                                    <span class="inline-block rounded text-2xl font-bold mb-2">15,6 MXN</span>
+                                </div>
+                                <div class="flex items-center px-6 pb-4">
+                                    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-red-500"
+                                        fill="currentColor" viewBox="0 0 24 24" stroke="none">
+                                        <path
+                                            d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z" />
+                                    </svg>
+                                    <span class="text-sm font-semibold text-white mr-2">13</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div
+                            class="flex-none w-64 h-content rounded overflow-hidden shadow-lg bg-purple-900 text-white m-2">
+                            <div class="w-64 h-content rounded overflow-hidden shadow-lg bg-purple-900 text-white">
+                                <img class="w-full h-64 object-cover object-center"
+                                    src="https://cdn-products.eneba.com/resized-products/YyNYKP3m5xR7FAIhac4YpR7Y8kWfnUTzTD_88vVvUII_350x200_1x-0.jpeg"
+                                    alt="Game Pass" />
+                                <div class="px-6 pt-4">
+                                    <div class="font-bold text-sm mb-1">
+                                        Xbox Game Pass Ultimate 1 Month Subscription Xbox...
+                                    </div>
+                                    <p class="text-green-500 font-bold">MEXICO</p>
+                                </div>
+                                <div class="px-6">
+                                    <p class="rounded text-sm font-semibold text-gray-400">
+                                        Desde
+                                    </p>
+                                    <span class="inline-block rounded text-2xl font-bold mb-2">1000 MXN</span>
+                                </div>
+                                <div class="flex items-center px-6 pb-4">
+                                    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-red-500"
+                                        fill="currentColor" viewBox="0 0 24 24" stroke="none">
+                                        <path
+                                            d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z" />
+                                    </svg>
+                                    <span class="text-sm font-semibold text-white mr-2">121312</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div
+                            class="flex-none w-64 h-content rounded overflow-hidden shadow-lg bg-purple-900 text-white m-2">
+                            <div class="w-64 h-content rounded overflow-hidden shadow-lg bg-purple-900 text-white">
+                                <img class="w-full h-64 object-cover object-center"
+                                    src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT1FheA4aCESa9fKuUfqmO8Mri-Y9jWYT054dfkEEe5_Q&s"
+                                    alt="Game Pass" />
+                                <div class="px-6 pt-4">
+                                    <div class="font-bold text-sm mb-1">
+                                        Playstation Ultimate 1 Month Subscription Xbox...
+                                    </div>
+                                    <p class="text-green-500 font-bold">GLOBAL</p>
+                                </div>
+                                <div class="px-6">
+                                    <p class="rounded text-sm font-semibold text-gray-400">
+                                        Desde
+                                    </p>
+                                    <span class="inline-block rounded text-2xl font-bold mb-2">179,99 MXN</span>
+                                </div>
+                                <div class="flex items-center px-6 pb-4">
+                                    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-red-500"
+                                        fill="currentColor" viewBox="0 0 24 24" stroke="none">
+                                        <path
+                                            d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z" />
+                                    </svg>
+                                    <span class="text-sm font-semibold text-white mr-2">1111</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div
+                            class="flex-none w-64 h-content rounded overflow-hidden shadow-lg bg-purple-900 text-white m-2">
+                            <div class="w-64 h-content rounded overflow-hidden shadow-lg bg-purple-900 text-white">
+                                <img class="w-full h-64 object-cover object-center"
+                                    src="https://cdn-products.eneba.com/resized-products/_4rpstQRtsSs-r3m455DZnIxL6qS6pff-W6PtHQCHpk_350x200_1x-0.jpeg"
+                                    alt="Game Pass" />
+                                <div class="px-6 pt-4">
+                                    <div class="font-bold text-sm mb-1">
+                                        Xbox Game Pass Ultimate 1 Month Subscription Xbox...
+                                    </div>
+                                    <p class="text-green-500 font-bold">MEXICO</p>
+                                </div>
+                                <div class="px-6">
+                                    <p class="rounded text-sm font-semibold text-gray-400">
+                                        Desde
+                                    </p>
+                                    <span class="inline-block rounded text-2xl font-bold mb-2">151,67 MXN</span>
+                                </div>
+                                <div class="flex items-center px-6 pb-4">
+                                    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-red-500"
+                                        fill="currentColor" viewBox="0 0 24 24" stroke="none">
+                                        <path
+                                            d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z" />
+                                    </svg>
+                                    <span class="text-sm font-semibold text-white mr-2">8558</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div
+                            class="flex-none w-64 h-content rounded overflow-hidden shadow-lg bg-purple-900 text-white m-2">
+                            <div class="w-64 h-content rounded overflow-hidden shadow-lg bg-purple-900 text-white">
+                                <img class="w-full h-64 object-cover object-center"
+                                    src="https://cdn-products.eneba.com/resized-products/oGbTesYfJxaB-_hJcv1vbQXPo-9T06iSegrF4auMaE8_350x200_1x-0.jpg"
+                                    alt="Game Pass" />
+                                <div class="px-6 pt-4">
+                                    <div class="font-bold text-sm mb-1">
+                                        Game pass de 1 mes disponible en todas partes
+                                    </div>
+                                    <p class="text-green-500 font-bold">GLOBAL</p>
+                                </div>
+                                <div class="px-6">
+                                    <p class="rounded text-sm font-semibold text-gray-400">
+                                        Desde
+                                    </p>
+                                    <span class="inline-block rounded text-2xl font-bold mb-2">10 MXN</span>
+                                </div>
+                                <div class="flex items-center px-6 pb-4">
+                                    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-red-500"
+                                        fill="currentColor" viewBox="0 0 24 24" stroke="none">
+                                        <path
+                                            d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z" />
+                                    </svg>
+                                    <span class="text-sm font-semibold text-white mr-2">9999</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div
+                            class="flex-none w-64 h-content rounded overflow-hidden shadow-lg bg-purple-900 text-white m-2">
+                            <div class="w-64 h-content rounded overflow-hidden shadow-lg bg-purple-900 text-white">
+                                <img class="w-full h-64 object-cover object-center"
+                                    src="https://cdn-products.eneba.com/resized-products/a1twxNHScUV4nHqGtArPBC_O5bHO2a5n1pRXgK0Wj30_350x200_1x-0.jpeg"
+                                    alt="Game Pass" />
+                                <div class="px-6 pt-4">
+                                    <div class="font-bold text-sm mb-1">
+                                        Xbox Game Pass Ultimate 1 Mes de Suscripcion
+                                    </div>
+                                    <p class="text-green-500 font-bold">MEXICO</p>
+                                </div>
+                                <div class="px-6">
+                                    <p class="rounded text-sm font-semibold text-gray-400">
+                                        Desde
+                                    </p>
+                                    <span class="inline-block rounded text-2xl font-bold mb-2">15,6 MXN</span>
+                                </div>
+                                <div class="flex items-center px-6 pb-4">
+                                    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-red-500"
+                                        fill="currentColor" viewBox="0 0 24 24" stroke="none">
+                                        <path
+                                            d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z" />
+                                    </svg>
+                                    <span class="text-sm font-semibold text-white mr-2">13</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div
+                            class="flex-none w-64 h-content rounded overflow-hidden shadow-lg bg-purple-900 text-white m-2">
+                            <div class="w-64 h-content rounded overflow-hidden shadow-lg bg-purple-900 text-white">
+                                <img class="w-full h-64 object-cover object-center"
+                                    src="https://cdn-products.eneba.com/resized-products/YyNYKP3m5xR7FAIhac4YpR7Y8kWfnUTzTD_88vVvUII_350x200_1x-0.jpeg"
+                                    alt="Game Pass" />
+                                <div class="px-6 pt-4">
+                                    <div class="font-bold text-sm mb-1">
+                                        Xbox Game Pass Ultimate 1 Month Subscription Xbox...
+                                    </div>
+                                    <p class="text-green-500 font-bold">MEXICO</p>
+                                </div>
+                                <div class="px-6">
+                                    <p class="rounded text-sm font-semibold text-gray-400">
+                                        Desde
+                                    </p>
+                                    <span class="inline-block rounded text-2xl font-bold mb-2">1000 MXN</span>
+                                </div>
+                                <div class="flex items-center px-6 pb-4">
+                                    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-red-500"
+                                        fill="currentColor" viewBox="0 0 24 24" stroke="none">
+                                        <path
+                                            d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z" />
+                                    </svg>
+                                    <span class="text-sm font-semibold text-white mr-2">121312</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div
+                            class="flex-none w-64 h-content rounded overflow-hidden shadow-lg bg-purple-900 text-white m-2">
+                            <div class="w-64 h-content rounded overflow-hidden shadow-lg bg-purple-900 text-white">
+                                <img class="w-full h-64 object-cover object-center"
+                                    src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT1FheA4aCESa9fKuUfqmO8Mri-Y9jWYT054dfkEEe5_Q&s"
+                                    alt="Game Pass" />
+                                <div class="px-6 pt-4">
+                                    <div class="font-bold text-sm mb-1">
+                                        Playstation Ultimate 1 Month Subscription Xbox...
+                                    </div>
+                                    <p class="text-green-500 font-bold">GLOBAL</p>
+                                </div>
+                                <div class="px-6">
+                                    <p class="rounded text-sm font-semibold text-gray-400">
+                                        Desde
+                                    </p>
+                                    <span class="inline-block rounded text-2xl font-bold mb-2">179,99 MXN</span>
+                                </div>
+                                <div class="flex items-center px-6 pb-4">
+                                    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-red-500"
+                                        fill="currentColor" viewBox="0 0 24 24" stroke="none">
+                                        <path
+                                            d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z" />
+                                    </svg>
+                                    <span class="text-sm font-semibold text-white mr-2">1111</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Right Button -->
+                    <button
+                        class="scroll-btn right-0 absolute h-16 w-16 right-0 z-10 inset-y-0 my-auto bg-gray-200 p-2 shadow-md text-purple-900 text-2xl font-bold hover:bg-white focus:outline-none focus:ring-2 focus:ring-purple-600 focus:ring-opacity-50"
+                        onclick="scrollCarousel(1)">
+                        ❯
+                    </button>
+                </div>
+                <div class="flex justify-center items-center mt-10 mb-10">
+                    <a href="./Actividad12.html">
+                        <button
+                            class="font-bold text-white w-48 py-2 px-4 border-2 border-transparent border-white hover:border-yellow-400 hover:bg-violet-900 transition duration-300">
+                            Mostrar todo
+                        </button>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <!--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------->
+        <!------------------------------------ACTIVIDAD-13--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------->
+        <div class="bg-indigo-800">
+            <div class="flex flex-col w-full m-auto">
+                <div class="ml-10 mt-10 mr-10 border border-blue-400 rounded-full p-4 w-max py-0 px-2">
+                    <h3 class="text-blue-400"><strong>Nueva categoría</strong></h3>
+                </div>
+                <h3 class="text-white text-3xl pl-10 pt-2 pb-5">
+                    <Strong>Las tarjetas de regalo más vendidas (comerciales)</Strong>
+                    <span title="Recomendaciones basadas en los productos mas comprados por nuestros usuarios"
+                        class="text-white border text-sm border-white rounded-full ml-2 pl-2 pr-2">i</span>
+                </h3>
+                <div class="relative pl-10 pr-10 slider-container group w-full m-auto">
+                    <div class="slider flex overflow-x-auto scroll-smooth space-x-6 py-4">
+                        <div
+                            class="card flex-none w-52 h-80 bg-indigo-900 flex justify-center items-crente flex-col text-left overflow-hidden">
+                            <img class="h-full w-full hover:opacity-80 duration-300"
+                                src="https://static.eneba.games/b34a62d9280dade2c509.jpg" alt="">
+                        </div>
+                        <div
+                            class="card flex-none w-52 h-80 bg-indigo-900 flex justify-center items-crente flex-col text-left overflow-hidden">
+                            <img class="h-full w-full hover:opacity-80 duration-300"
+                                src="https://static.eneba.games/02092c68015e5748e92e.jpg" alt="">
+                        </div>
+                        <div
+                            class="card flex-none w-52 h-80 bg-indigo-900 flex justify-center items-crente flex-col text-left overflow-hidden">
+                            <img class="h-full w-full hover:opacity-80 duration-300"
+                                src="https://static.eneba.games/f6c924f69ce1880d4871.jpg" alt="">
+                        </div>
+                        <div
+                            class="card flex-none w-52 h-80 bg-indigo-900 flex justify-center items-crente flex-col text-left overflow-hidden">
+                            <img class="h-full w-full hover:opacity-80 duration-300"
+                                src="https://static.eneba.games/df0f2019dda2a609d853.jpg" alt="">
+                        </div>
+                        <div
+                            class="card flex-none w-52 h-80 bg-indigo-900 flex justify-center items-crente flex-col text-left overflow-hidden">
+                            <img class="h-full w-full hover:opacity-80 duration-300"
+                                src="https://static.eneba.games/68975c5f67d732bdfdde.jpg" alt="">
+                        </div>
+                        <div
+                            class="card flex-none w-52 h-80 bg-indigo-900 flex justify-center items-crente flex-col text-left overflow-hidden">
+                            <img class="h-full w-full hover:opacity-80 duration-300"
+                                src="https://static.eneba.games/1d5652ff6ea9987478bd.jpg" alt="">
+                        </div>
+                        <div
+                            class="card flex-none w-52 h-80 bg-indigo-900 flex justify-center items-crente flex-col text-left overflow-hidden">
+                            <img class="h-full w-full hover:opacity-80 duration-300"
+                                src="https://static.eneba.games/a8985b12c954e315a616.jpg" alt="">
+                        </div>
+                        <div
+                            class="card flex-none w-52 h-80 bg-indigo-900 flex justify-center items-crente flex-col text-left overflow-hidden">
+                            <img class="h-full w-full hover:opacity-80 duration-300"
+                                src="https://static.eneba.games/08fa95d176182a0db516.jpg" alt="">
+                        </div>
+                        <div
+                            class="card flex-none w-52 h-80 bg-indigo-900 flex justify-center items-crente flex-col text-left overflow-hidden">
+                            <img class="h-full w-full hover:opacity-80 duration-300"
+                                src="https://static.eneba.games/2f87a42bf58afffb3271.jpg" alt="">
+                        </div>
+                        <div
+                            class="card flex-none w-52 h-80 bg-indigo-900 flex justify-center items-crente flex-col text-left overflow-hidden">
+                            <img class="h-full w-full hover:opacity-80 duration-300"
+                                src="https://static.eneba.games/f59c2924addcb4d15505.jpg" alt="">
+                        </div>
+                        <div
+                            class="card flex-none w-52 h-80 bg-indigo-900 flex justify-center items-crente flex-col text-left overflow-hidden">
+                            <img class="h-full w-full hover:opacity-80 duration-300"
+                                src="https://static.eneba.games/d5aa9555bbaabee23ba8.jpg" alt="">
+                        </div>
+                        <div
+                            class="card flex-none w-52 h-80 bg-indigo-900 flex justify-center items-crente flex-col text-left overflow-hidden">
+                            <img class="h-full w-full hover:opacity-80 duration-300"
+                                src="https://static.eneba.games/83af06dd953c92ec8c7f.jpg" alt="">
+                        </div>
+                        <div
+                            class="card flex-none w-52 h-80 bg-indigo-900 flex justify-center items-crente flex-col text-left overflow-hidden">
+                            <img class="h-full w-full hover:opacity-80 duration-300"
+                                src="https://static.eneba.games/77fa31f48440d2d42bc8.jpg" alt="">
+                        </div>
+                        <div
+                            class="card flex-none w-52 h-80 bg-indigo-900 flex justify-center items-crente flex-col text-left overflow-hidden">
+                            <img class="h-full w-full hover:opacity-80 duration-300"
+                                src="https://static.eneba.games/7da134f2c901f74e6f4c.jpg" alt="">
+                        </div>
+                        <div
+                            class="card flex-none w-52 h-80 bg-indigo-900 flex justify-center items-crente flex-col text-left overflow-hidden">
+                            <img class="h-full w-full hover:opacity-80 duration-300"
+                                src="https://static.eneba.games/eb771c181d1471af4430.jpg" alt="">
+                        </div>
+                    </div>
+                    <button onclick="desplazarIzquierda()"
+                        class="ml-10 left-button absolute top-1/2 left-0 transform -translate-y-1/2 opacity-0 group-hover:opacity-100 transition-opacity bg-black bg-opacity-50 hover:bg-opacity-75 text-white w-12 h-12 duration-300">
+                        < </button>
+                            <button onclick="desplazarDerecha()"
+                                class="mr-10 right-button absolute top-1/2 right-0 transform -translate-y-1/2 opacity-0 group-hover:opacity-100 transition-opacity duration-300 bg-black bg-opacity-50 hover:bg-opacity-75 text-white w-12 h-12">>
+                            </button>
+                </div>
+                <div class="container flex justify-center text-white mx-auto px-4 py-4">
+                    <a href="#">
+                        <button
+                            class="border border-white w-40 p-1 m-auto text-white hover:bg-indigo-900 hover:border-yellow-500 duration-300 mt-8 mb-8">Mostrar
+                            Todo
+                        </button>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <!--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------->
+        <!------------------------------------ACTIVIDAD-14--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------->
+        <div class="bg-violet-800">
+            <!--Aqui empieza la seccion de tarjetas más vendidas-->
+            <div class="flex flex-col w-full m-auto bg-indigo-600 px-2">
+                <h3 class="text-white text-3xl"><Strong>Las tarjetas de regalo más vendidas (juegos)</Strong></h3>
+                <div class="relative slider-container group w-full m-auto">
+                    <div class="slider flex overflow-x-auto scroll-smooth space-x-4 py-4">
+                        <div
+                            class="card flex-none w-52 h-80 bg-indigo-900 flex justify-center items-crente flex-col text-left overflow-hidden">
+                            <img class="h-3/5 w-full hover:opacity-80 duration-300"
+                                src="https://cdn-products.eneba.com/resized-products/8SeJDKqcxbroibahTAepaJB0Ei-VDhsxNnFm168mtJM_350x200_1x-0.png"
+                                alt="">
+                            <p class="text-white text-sm ml-2"><Strong>Overwatch 2-2</Strong></p>
+                            <p class="text-white text-sm ml-2"><Strong>Overwatch Coins Battle.ne...</Strong></p>
+                            <p class="text-green-600 text-sm ml-2 mt-1"><strong>GLOBAL</strong></p>
+                            <p class="text-gray-400 text-sm ml-2">Desde</p>
+                            <p class="text-white ml-2"><strong>21,68 MXN</strong></p>
+                            <p class="text-gray-400 text-sm ml-2"><strong>1892</strong></p>
+                        </div>
+                        <div
+                            class="card flex-none w-52 h-80 bg-indigo-900 flex justify-center items-crente flex-col text-left overflow-hidden">
+                            <img class="h-3/5 w-full hover:opacity-80 duration-300"
+                                src="https://cdn-products.eneba.com/resized-products/_4rpstQRtsSs-r3m455DZnIxL6qS6pff-W6PtHQCHpk_350x200_1x-0.jpeg"
+                                alt="">
+                            <p class="text-white text-sm ml-2"><Strong>Xbox Game pass Ultimate</Strong></p>
+                            <p class="text-white text-sm ml-2"><Strong>1 Month Suscription...</Strong></p>
+                            <p class="text-green-600 text-sm ml-2 mt-1"><strong>MEXICO</strong></p>
+                            <p class="text-gray-400 text-sm ml-2">Desde</p>
+                            <p class="text-white ml-2"><strong>158,40 MXN</strong></p>
+                            <p class="text-gray-400 text-sm ml-2"><strong>8068</strong></p>
+                        </div>
+                        <div
+                            class="card flex-none w-52 h-80 bg-indigo-900 flex justify-center items-crente flex-col text-left overflow-hidden">
+                            <img class="h-3/5 w-full hover:opacity-80 duration-300"
+                                src="https://cdn-products.eneba.com/resized-products/pyX1BflNLx0NouF1BvlJ2Q9Afur0gh0HJv1pAb2NzcE_350x200_1x-0.jpg"
+                                alt="">
+                            <p class="text-white text-sm ml-2"><Strong>Overwatch 2-2</Strong></p>
+                            <p class="text-white text-sm ml-2"><Strong>Overwatch Coins Battle.ne...</Strong></p>
+                            <p class="text-green-600 text-sm ml-2 mt-1"><strong>GLOBAL</strong></p>
+                            <p class="text-gray-400 text-sm ml-2">Desde</p>
+                            <p class="text-white ml-2"><strong>21,68 MXN</strong></p>
+                            <p class="text-gray-400 text-sm ml-2"><strong>1892</strong></p>
+                        </div>
+                        <div
+                            class="card flex-none w-52 h-80 bg-indigo-900 flex justify-center items-crente flex-col text-left overflow-hidden">
+                            <img class="h-3/5 w-full hover:opacity-80 duration-300"
+                                src="https://cdn-products.eneba.com/resized-products/zqrR_dt76ZERXzHx2F8nh7I-Q4sd4zFcJ9tfXrl8jjE_350x200_1x-0.jpg"
+                                alt="">
+                            <p class="text-white text-sm ml-2"><Strong>XBOX Game Pass Core</Strong></p>
+                            <p class="text-white text-sm ml-2"><Strong>Codigo de 3 meses...</Strong></p>
+                            <p class="text-green-600 text-sm ml-2 mt-1"><strong>GLOBAL</strong></p>
+                            <p class="text-gray-400 text-sm ml-2">Desde</p>
+                            <p class="text-white ml-2"><strong>240,68 MXN</strong></p>
+                            <p class="text-gray-400 text-sm ml-2"><strong>1892</strong></p>
+                        </div>
+                        <div
+                            class="card flex-none w-52 h-80 bg-indigo-900 flex justify-center items-crente flex-col text-left overflow-hidden">
+                            <img class="h-3/5 w-full hover:opacity-80 duration-300"
+                                src="https://cdn-products.eneba.com/resized-products/a1twxNHScUV4nHqGtArPBC_O5bHO2a5n1pRXgK0Wj30_350x200_1x-0.jpeg"
+                                alt="">
+                            <p class="text-white text-sm ml-2"><Strong>Xbox Game pass ultimate</Strong></p>
+                            <p class="text-white text-sm ml-2"><Strong>Month Trial Windows...</Strong></p>
+                            <p class="text-green-600 text-sm ml-2 mt-1"><strong>GLOBAL</strong></p>
+                            <p class="text-gray-400 text-sm ml-2">Desde</p>
+                            <p class="text-white ml-2"><strong>139,68 MXN</strong></p>
+                            <p class="text-gray-400 text-sm ml-2"><strong>1892</strong></p>
+                        </div>
+                        <div
+                            class="card flex-none w-52 h-80 bg-indigo-900 flex justify-center items-crente flex-col text-left overflow-hidden">
+                            <img class="h-3/5 w-full hover:opacity-80 duration-300"
+                                src="https://cdn-products.eneba.com/resized-products/QggZ0nlQRAu8fX2IGkKpmeYIILsXitAv3KBeP2ndwNQ_350x200_1x-0.jpeg"
+                                alt="">
+                            <p class="text-white text-sm ml-2"><Strong>Gamepass For PC-4</Strong></p>
+                            <p class="text-white text-sm ml-2"><Strong>One Month Suscription...</Strong></p>
+                            <p class="text-green-600 text-sm ml-2 mt-1"><strong>Estados Unidos</strong></p>
+                            <p class="text-gray-400 text-sm ml-2">Desde</p>
+                            <p class="text-white ml-2"><strong>52,68 MXN</strong></p>
+                            <p class="text-gray-400 text-sm ml-2"><strong>1892</strong></p>
+                        </div>
+                    </div>
+                    <button onclick="desplazarIzquierdaTARJETAS()"
+                        class="left-button absolute top-1/2 left-0 transform -translate-y-1/2 opacity-0 group-hover:opacity-100 transition-opacity  bg-slate-200 hover:bg-white w-12 h-12 duration-300">
+                        < </button>
+                            <button onclick="desplazarDerechaTARJETAS()"
+                                class="right-button absolute top-1/2 right-0 transform -translate-y-1/2 opacity-0 group-hover:opacity-100 transition-opacity duration-300 bg-slate-200 hover:bg-white w-12 h-12">>
+                            </button>
+                </div>
+                <div class="container flex justify-center text-white mx-auto px-4 py-2">
+                    <a href="#">
+                        <button
+                            class="border border-white w-40 p-1 m-auto text-white hover:bg-indigo-900 hover:border-yellow-500 duration-300 mt-8 mb-8">Mostrar
+                            Todo
+                        </button>
+                    </a>
+                </div>
+            </div>
+            <!--Aqui termina la seccion de tarjetas más vendidas-->
+        </div>
+        <!--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------->
+        <!------------------------------------ACTIVIDAD-15--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------->
+        <div class="bg-indigo-800">
+            <div class="w-[1200px] h-[612px] text-white text-[30px] text grid mx-auto">
+                <h1>Próximos Lanzamientos <div class="tooltip"
+                        data-tip="Productos en Preventa Organizados por Relevancia"><i class="ph-bold ph-info"></i>
+                    </div>
+                </h1>
+                <div class="carousel carousel-center h-[450px] p-4 space-x-4 bg-neutral rounded-box">
+                    <div class="carousel-item grid w-[200px]">
+                        <img src="./imgs/c1.png" class="rounded-box" />
+                        <p class="text-[12px]">MLB The show 24 - Xbox Series X|S Standard Edition XBOX LIVE Key
+                            GLOBAL</p>
+                        <p class="text-[12px] text-green-500">GLOBAL</p>
+                        <p class="text-[12px] text-gray-500">Desde</p>
+                        <p class="text-[14px]">1,076.10 MXN</p>
+                        <div class="tooltip flex w-[20px] h-auto"
+                            data-tip="Número de Veces añadido a la lista de deseos"><i
+                                class="ph-bold ph-heart text-[14px] mt-1 mr-2"></i>
+                            <p class="text-[14px]">7</p>
+                        </div>
+                    </div>
+                    <div class="carousel-item grid w-[200px]">
+                        <img src="./imgs/c2.png" class="rounded-box" />
+                        <p class="text-[12px]">Alone in the Dark (PC) Steam Key GLOBAL</p>
+                        <p class="text-[12px] text-green-500">GLOBAL</p>
+                        <p class="text-[12px] text-gray-500">Desde</p>
+                        <p class="text-[14px]">688.46 MXN</p>
+                        <div class="tooltip flex w-[20px] h-auto"
+                            data-tip="Número de Veces añadido a la lista de deseos"><i
+                                class="ph-bold ph-heart text-[14px] mt-1 mr-2"></i>
+                            <p class="text-[14px]">49</p>
+                        </div>
+                    </div>
+                    <div class="carousel-item grid w-[200px]">
+                        <img src="./imgs/c3.png" class="rounded-box" />
+                        <p class="text-[12px]">Horizon Forbidden West Complete Edition (PC)</p>
+                        <p class="text-[12px] text-green-500">GLOBAL</p>
+                        <p class="text-[12px] text-gray-500">Desde</p>
+                        <p class="text-[14px]">848.29 MXN</p>
+                        <div class="tooltip flex w-[20px] h-auto"
+                            data-tip="Número de Veces añadido a la lista de deseos"><i
+                                class="ph-bold ph-heart text-[14px] mt-1 mr-2"></i>
+                            <p class="text-[14px]">1000</p>
+                        </div>
+                    </div>
+                    <div class="carousel-item grid w-[200px]">
+                        <img src="./imgs/c4.png" class="rounded-box" />
+                        <p class="text-[12px]">Dragon's Dogma 2 Deluxe Edition (Xbox Serires X|S)</p>
+                        <p class="text-[12px] text-green-500">GLOBAL</p>
+                        <p class="text-[12px] text-gray-500">Desde</p>
+                        <p class="text-[14px]">1,312.84 MXN</p>
+                        <div class="tooltip flex w-[20px] h-auto"
+                            data-tip="Número de Veces añadido a la lista de deseos"><i
+                                class="ph-bold ph-heart text-[14px] mt-1 mr-2"></i>
+                            <p class="text-[14px]">154</p>
+                        </div>
+                    </div>
+                    <div class="carousel-item grid w-[200px]">
+                        <img src="./imgs/c4.png" class="rounded-box" />
+                        <p class="text-[12px]">Dragon's Dogma 2 (Xbox Serires X|S)</p>
+                        <p class="text-[12px] text-green-500">GLOBAL</p>
+                        <p class="text-[12px] text-gray-500">Desde</p>
+                        <p class="text-[14px]">1,146.10 MXN</p>
+                        <div class="tooltip flex w-[20px] h-auto"
+                            data-tip="Número de Veces añadido a la lista de deseos"><i
+                                class="ph-bold ph-heart text-[14px] mt-1 mr-2"></i>
+                            <p class="text-[14px]">358</p>
+                        </div>
+                    </div>
+                    <div class="carousel-item grid w-[200px]">
+                        <img src="./imgs/c5.png" class="rounded-box" />
+                        <p class="text-[12px]">SOUTH PARK: SNOW DAY! Digital Deluxe Edition (PC)</p>
+                        <p class="text-[12px] text-green-500">GLOBAL</p>
+                        <p class="text-[12px] text-gray-500">Desde</p>
+                        <p class="text-[14px]">635.89 MXN</p>
+                        <div class="tooltip flex w-[20px] h-auto"
+                            data-tip="Número de Veces añadido a la lista de deseos"><i
+                                class="ph-bold ph-heart text-[14px] mt-1 mr-2"></i>
+                            <p class="text-[14px]">44</p>
+                        </div>
+                    </div>
+                    <div class="carousel-item grid w-[200px]">
+                        <img src="./imgs/c6.png" class="rounded-box" />
+                        <p class="text-[12px]">Elden Ring: Shadow of the Erdtree (DLC)(PC)</p>
+                        <p class="text-[12px] text-green-500">GLOBAL</p>
+                        <p class="text-[12px] text-gray-500">Desde</p>
+                        <p class="text-[14px]">634.25 MXN</p>
+                        <div class="tooltip flex w-[20px] h-auto"
+                            data-tip="Número de Veces añadido a la lista de deseos"><i
+                                class="ph-bold ph-heart text-[14px] mt-1 mr-2"></i>
+                            <p class="text-[14px]">36</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="flex justify-center">
+                    <button class="btn btn-outline">Mostrar todo</button>
+                </div>
+            </div>
+        </div>
+        <!--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------->
+        <!------------------------------------ACTIVIDAD-16--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------->
+        <div class="w-full bg-violet-800 h-auto flex flex-col items-center justify-center py-6 ">
+            <span class="text-white sel w-4/5 text-3xl h-16">Géneros</span>
+            <div class="text-white bg-violet-800 w-4/5 grid grid-cols-7 grid-rows-1 gap-6 ">
+                <div class="flex flex-col shadow-2xl items-center bg-violet-700 w-36 h-36 hover:bg-violet-900">
+                    <span class="h-2/5 flex w-full items-center justify-center">6904</span>
+                    <div class="h-3/5 flex items-center justify-center ">
+                        <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M29.8566 4C29.5379 4.54648 29.4241 5.19445 29.6821 5.71751C30.3574 6.18592 33.7796 7.03687 33.4912 8.19229L33.3698 8.62167C32.7271 8.10807 31.9295 7.84284 31.1162 7.87221C30.7292 7.95028 30.3347 8.12983 29.9553 8.14545C29.4697 8.14545 29.0447 8.02054 28.6653 7.79414C28.9309 8.53579 29.8718 9.08227 30.4485 8.98859C31.359 8.80123 32.3455 9.30086 33.0132 9.53507C32.6034 10.6905 31.2376 10.1518 31.2376 10.1518L21.4038 7.82537L19.7951 6.62311L18.3914 8.0908L25.5619 10.5109L15.8874 10.7295L13.482 9.69901L10.1965 11.6507L24.9397 12.7593L20.4097 17.6854H28.4074C29.9705 16.3817 33.4912 13.4385 33.5368 13.4697C34.5763 15.9601 36.2229 15.0545 37.4748 13.6024C37.8391 13.1809 38.2336 14.6251 38.4461 12.2753L38.5827 12.0255C37.1334 11.3853 34.6673 12.4939 36.018 10.5265C36.4353 9.92541 37.6949 10.0894 38.9924 10.8622C39.0379 9.59753 38.909 7.34915 37.748 6.84951C36.5491 6.33425 35.0012 6.3889 34.4094 7.0681C33.6126 5.66286 31.2225 5.49111 30.2816 5.35059C30.0358 4.94241 29.89 4.47894 29.8566 4ZM14.6809 8.91833L14.3091 9.24622L15.6142 9.81612L16.4868 8.91052H14.6809V8.91833ZM36.9665 10.9247C37.4976 11.3228 37.528 11.4165 37.877 11.4321C38.0136 11.3541 38.2943 11.0418 38.0288 10.9871L37.141 10.7998C37.1018 10.7929 37.0616 10.8022 37.0289 10.8255C36.9963 10.8489 36.9739 10.8845 36.9665 10.9247ZM11.2967 12.4236L10.8187 12.8608H12.6246L13.1102 12.4236H11.2967ZM8.13259 13.5478L7.16893 14.8203H8.44369L8.88379 14.2895H12.3135L11.6761 14.8672H12.9661L14.256 13.5946L8.13259 13.5478ZM9.39217 14.875L1 24.7897L2.85144 24.415L10.8035 14.875H9.39976H9.39217ZM19.613 18.5442L9.02796 30.0593L7.68491 30.4184C7.68491 30.4184 6.63778 32.8854 6.16733 35.8052C6.77436 36.1487 7.5635 35.1494 7.5635 35.1494C7.5635 35.1494 7.47245 36.2346 8.09465 35.9535C9.23283 33.588 10.5076 31.1211 10.5076 31.1211L23.3842 21.0268L25.0763 21.4874L27.3071 22.0963L22.2688 26.9678L21.3582 25.9607C21.3582 25.9607 18.5963 29.1225 17.5491 31.4568C17.883 31.8471 19.1881 30.8166 19.1881 30.8166C19.1881 30.8166 18.7556 31.6207 19.3399 31.5973C20.7816 30.2077 21.7376 29.1225 21.7376 29.1225L32.4365 20.9487L28.5515 18.5442H19.6206H19.613Z"
+                                fill="white" />
+                        </svg>
+                    </div>
+                    <span class="h-2/5 flex items-center justify-center">Acción</span>
+                </div>
+                <div class="flex flex-col shadow-2xl items-center bg-violet-700 w-36 h-36 hover:bg-violet-900">
+                    <span class="h-2/5 flex w-full items-center justify-center">4880</span>
+                    <div class="h-3/5 flex items-center justify-center ">
+                        <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M24.7139 19.2113L25.6768 18.287L29.4497 21.9254L28.4867 22.8497L24.7139 19.2113ZM35.516 6.64093C35.1921 6.64093 34.9295 6.89301 34.9295 7.20391V26.2695C34.9295 26.5804 35.1921 26.8325 35.516 26.8325H36.2863C36.5402 26.8325 36.7853 26.8577 37.0304 26.8997H37.0654C37.3018 26.9418 37.5206 27.009 37.7307 27.0846L37.792 27.1014C38.0021 27.1854 38.1946 27.2695 38.3785 27.3871L38.4485 27.4207C38.6236 27.5384 38.7987 27.6644 38.9562 27.7988L39 27.8324V9.24575C38.8774 7.73327 37.7657 6.64093 36.2863 6.64093H35.516V6.64093Z"
+                                fill="white" />
+                            <path
+                                d="M35.7349 33.9916C36.6067 33.9593 37.4321 33.6061 38.04 33.0054C38.6479 32.4047 38.9917 31.6024 39 30.765C38.8687 29.2105 37.757 28.1349 36.2863 28.1349H35.516C34.4393 28.1349 33.5727 27.2947 33.5727 26.2695V9.90116H31.1917L29.3621 12.2455C29.3041 12.3208 29.2297 12.3832 29.144 12.4282C29.0584 12.4732 28.9636 12.4998 28.8662 12.5062C28.7688 12.5126 28.6711 12.4986 28.5799 12.4652C28.4887 12.4318 28.4061 12.3798 28.3379 12.3127L25.8256 9.90116H24.0223C24.1305 10.8202 24.0091 11.7508 23.6681 12.6158C23.3272 13.4808 22.7764 14.2555 22.0615 14.8755L24.6876 17.3963L25.1691 16.9342C25.4317 16.6821 25.8694 16.6821 26.132 16.9342L30.8765 21.4884C31.1391 21.7405 31.1391 22.1606 30.8765 22.4127L28.9507 24.2529C28.8879 24.3144 28.813 24.3632 28.7304 24.3966C28.6477 24.4299 28.5589 24.4471 28.4692 24.4471C28.3796 24.4471 28.2908 24.4299 28.2081 24.3966C28.1255 24.3632 28.0505 24.3144 27.9878 24.2529L23.252 19.6987C22.9894 19.4466 22.9894 19.0265 23.252 18.7744L23.7335 18.3206L20.9498 15.6486C19.9703 16.1775 18.8579 16.4368 17.7348 16.3981C16.6117 16.3594 15.5215 16.0241 14.5841 15.4292C13.6467 14.8342 12.8984 14.0026 12.4214 13.0258C11.9445 12.0491 11.7575 10.965 11.8809 9.89276H6.42732V26.2695C6.42732 27.2947 5.55195 28.1349 4.48399 28.1349H3.71366C3.16217 28.1349 2.66321 28.2862 2.23428 28.5551C1.86501 28.813 1.5619 29.1484 1.34802 29.5357C1.13413 29.923 1.01511 30.3521 1 30.7902C1.01151 31.6453 1.3735 32.4617 2.00758 33.0625C2.64165 33.6632 3.49676 34.0001 4.3877 34H8.7208L9.8938 31.7481C9.94273 31.6567 10.0133 31.5777 10.0999 31.5174C10.1865 31.4571 10.2867 31.4171 10.3923 31.4008C10.4979 31.3844 10.6061 31.3921 10.708 31.4232C10.81 31.4544 10.9029 31.5081 10.9793 31.58L13.4916 34H29.1345L30.29 32.3363C30.4651 32.0758 30.8152 31.975 31.1216 32.0926L35.7349 33.9916ZM9.62244 22.085C9.55968 22.1465 9.48477 22.1954 9.4021 22.2287C9.31943 22.262 9.23065 22.2792 9.14098 22.2792C9.05131 22.2792 8.96253 22.262 8.87986 22.2287C8.79719 22.1954 8.72228 22.1465 8.65953 22.085C8.39691 21.8329 8.39691 21.4128 8.65953 21.1607L9.88505 19.9928L8.65953 18.8248C8.5963 18.7641 8.54615 18.692 8.51193 18.6128C8.47771 18.5335 8.4601 18.4485 8.4601 18.3626C8.4601 18.2768 8.47771 18.1918 8.51193 18.1125C8.54615 18.0332 8.5963 17.9612 8.65953 17.9005C8.78722 17.7779 8.9604 17.7091 9.14098 17.7091C9.2304 17.7091 9.31893 17.726 9.40154 17.7588C9.48415 17.7917 9.55921 17.8398 9.62244 17.9005L10.8392 19.0769L12.056 17.9005C12.1837 17.7779 12.3569 17.7091 12.5374 17.7091C12.718 17.7091 12.8912 17.7779 13.0189 17.9005C13.1466 18.0231 13.2183 18.1893 13.2183 18.3626C13.2183 18.536 13.1466 18.7022 13.0189 18.8248L11.7934 20.0012L13.0189 21.1607C13.1466 21.2833 13.2183 21.4495 13.2183 21.6229C13.2183 21.7962 13.1466 21.9625 13.0189 22.085C12.8912 22.2076 12.718 22.2764 12.5374 22.2764C12.3569 22.2764 12.1837 22.2076 12.056 22.085L10.8305 20.9086L9.62244 22.085ZM11.9859 25.3621C11.8984 25.4041 11.8021 25.4209 11.7146 25.4209C11.5808 25.4216 11.4497 25.3845 11.3376 25.3143C11.2256 25.2441 11.1375 25.1438 11.0843 25.026C11.0003 24.8336 10.9186 24.6403 10.8392 24.4462C10.7342 24.2109 10.6466 24.0008 10.5853 23.9C10.5138 23.751 10.5031 23.5818 10.5553 23.4256C10.6075 23.2694 10.7188 23.1377 10.8672 23.0564C11.0156 22.9752 11.1904 22.9503 11.357 22.9867C11.5236 23.0231 11.6699 23.1181 11.7671 23.253C11.8721 23.421 11.9684 23.6647 12.091 23.9588L12.3361 24.5134C12.4849 24.8495 12.3273 25.2276 11.9859 25.3705V25.3621ZM15.2248 29.2189C15.1664 29.2831 15.0952 29.3356 15.0155 29.3733C14.9359 29.4111 14.8492 29.4333 14.7605 29.4388C14.6718 29.4443 14.5829 29.4328 14.4988 29.4052C14.4148 29.3776 14.3372 29.3342 14.2707 29.2777C13.5704 28.6895 12.9489 28.0341 12.4236 27.3283C12.344 27.1877 12.3206 27.024 12.358 26.8681C12.3954 26.7121 12.4909 26.5747 12.6265 26.4817C12.7622 26.3887 12.9286 26.3465 13.0944 26.3632C13.2602 26.3798 13.4139 26.4541 13.5266 26.572C13.9906 27.1938 14.542 27.7736 15.1636 28.2946C15.4437 28.5299 15.4787 28.9416 15.2248 29.2189ZM19.9256 31.2355C19.8877 31.4045 19.7819 31.5523 19.631 31.6467C19.4802 31.7412 19.2966 31.7746 19.1202 31.7397C18.2449 31.5632 17.3695 31.2355 16.5116 30.7902C16.3712 30.6983 16.2714 30.5594 16.232 30.4007C16.1925 30.242 16.2161 30.0749 16.2982 29.932C16.3803 29.7892 16.5149 29.6808 16.6758 29.6282C16.8367 29.5755 17.0123 29.5824 17.1682 29.6474C17.8648 30.0264 18.6175 30.3013 19.4004 30.4625C19.768 30.5297 20.0044 30.8826 19.9256 31.2271V31.2355ZM24.6088 31.0002C23.7379 31.4118 22.8041 31.6869 21.8427 31.8153C21.6789 31.8039 21.525 31.7363 21.409 31.6248C21.293 31.5133 21.2227 31.3655 21.211 31.2083C21.1993 31.0512 21.247 30.8952 21.3453 30.769C21.4436 30.6429 21.586 30.5549 21.7464 30.5213C22.4992 30.4121 23.2608 30.1852 24.0136 29.8323C24.1761 29.7565 24.3633 29.7458 24.5341 29.8025C24.6186 29.8306 24.6965 29.8744 24.7634 29.9314C24.8303 29.9884 24.8849 30.0575 24.924 30.1348C24.9631 30.212 24.9859 30.2959 24.9912 30.3816C24.9965 30.4673 24.9842 30.5532 24.955 30.6344C24.9257 30.7155 24.8801 30.7903 24.8207 30.8545C24.7613 30.9188 24.6893 30.9711 24.6088 31.0087V31.0002ZM27.979 28.5551C27.9615 28.5719 27.5939 29.0004 26.9286 29.5382C26.8602 29.5945 26.7807 29.6371 26.6948 29.6635C26.6089 29.6898 26.5184 29.6994 26.4286 29.6915C26.3388 29.6837 26.2516 29.6586 26.1721 29.6179C26.0926 29.5771 26.0224 29.5214 25.9657 29.4542C25.9083 29.3887 25.8651 29.313 25.8384 29.2313C25.8118 29.1497 25.8022 29.0639 25.8104 28.9787C25.8185 28.8935 25.8442 28.8107 25.8859 28.7351C25.9275 28.6595 25.9844 28.5926 26.0532 28.5383C26.3714 28.2851 26.6699 28.0099 26.9461 27.7148C27.0688 27.6079 27.2278 27.5474 27.3934 27.5447C27.5591 27.542 27.7202 27.5972 27.8466 27.7C27.973 27.8028 28.0561 27.9463 28.0805 28.1036C28.1049 28.2609 28.0688 28.4214 27.979 28.5551Z"
+                                fill="white" />
+                            <path
+                                d="M2.83829 15.9511C3.07464 16.1779 3.1009 16.5393 2.89956 16.7997L1 19.2365V27.8324L1.07878 27.7736C1.21884 27.6476 1.37641 27.5299 1.53398 27.4375L1.63902 27.3703C1.8141 27.2695 2.00668 27.177 2.19926 27.1014C2.22552 27.1014 2.25179 27.0846 2.26929 27.0762C2.47938 27.0006 2.70698 26.9418 2.92582 26.9082L2.96959 26.8997C3.20594 26.8577 3.4598 26.8325 3.71366 26.8325H4.48399C4.80788 26.8325 5.07049 26.5804 5.07049 26.2695V7.2039C5.07049 6.89301 4.80788 6.64093 4.48399 6.64093H3.71366C2.22552 6.64093 1.1138 7.73327 1 9.29617V14.1865L2.83829 15.9511ZM13.369 9.4054C13.3165 9.59866 13.2815 9.78352 13.2552 9.95998V9.99359C13.1306 11.0152 13.3692 12.0472 13.9323 12.9223C14.4955 13.7973 15.3501 14.4641 16.3576 14.8143C17.3651 15.1646 18.4664 15.1778 19.4827 14.8518C20.499 14.5259 21.3707 13.8798 21.9565 13.0185C22.4555 12.2657 22.7154 11.3897 22.7046 10.4974C22.6937 9.60513 22.4124 8.73519 21.8952 7.99376C21.3816 7.27014 20.662 6.70366 19.8222 6.36191C18.9824 6.02015 18.0578 5.91757 17.159 6.0664C16.2601 6.21522 15.4248 6.60917 14.7528 7.20123C14.0807 7.79329 13.6004 8.55845 13.369 9.4054ZM18.6388 7.94334C18.6388 8.30465 18.3412 8.59875 17.9648 8.59875C17.448 8.63129 16.9636 8.85127 16.6096 9.21407C16.2556 9.57686 16.0587 10.0553 16.0587 10.5524C16.0587 11.0494 16.2556 11.5279 16.6096 11.8907C16.9636 12.2535 17.448 12.4734 17.9648 12.506C18.1314 12.5242 18.2852 12.6006 18.3969 12.7207C18.5086 12.8408 18.5704 12.9962 18.5704 13.1572C18.5704 13.3182 18.5086 13.4736 18.3969 13.5937C18.2852 13.7138 18.1314 13.7902 17.9648 13.8084C17.0949 13.766 16.2753 13.4044 15.6753 12.7984C15.0753 12.1925 14.7407 11.3884 14.7407 10.5524C14.7407 9.71634 15.0753 8.91227 15.6753 8.30629C16.2753 7.70032 17.0949 7.33876 17.9648 7.29633C18.3412 7.29633 18.6388 7.58202 18.6388 7.94334Z"
+                                fill="white" />
+                        </svg>
+                    </div>
+                    <span class="h-2/5 flex items-center justify-center">Aventuras</span>
+                </div>
+                <div class="flex flex-col shadow-2xl items-center bg-violet-700 w-36 h-36 hover:bg-violet-900">
+                    <span class="h-2/5 flex w-full items-center justify-center">2839</span>
+                    <div class="h-3/5 flex items-center justify-center ">
+                        <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M32.0919 15.5002C30.5765 15.6167 29.7308 16.4234 29.5457 17.8932C29.3695 19.372 28.4004 20.564 26.6471 21.4872C25.7849 22.7854 25.4299 24.3642 25.6515 25.9146C25.7132 26.0939 25.8013 26.1835 25.9158 26.1835C26.1009 26.1835 28.3651 25.359 29.1845 27.7519C29.7308 29.3562 29.7924 31.0412 29.3607 32.8247C30.3299 33.8106 32.0567 34.1691 34.5324 33.9271C37.3694 33.5686 38.8495 32.9143 38.9729 31.9912C39.1491 30.611 38.4266 26.0043 37.9685 25.0901C37.528 24.158 35.0699 20.8419 34.7967 19.4616C34.6189 18.5497 34.5304 17.622 34.5324 16.6922C34.5677 15.8946 34.2064 15.5002 33.4399 15.5002H32.0919Z"
+                                fill="white" />
+                            <path
+                                d="M23.2991 24.2566C23.7485 23.9787 23.8366 23.9787 23.8366 24.2566V25.7264C23.537 26.2193 22.33 26.533 20.2155 26.6495C18.101 26.775 16.6473 25.9774 15.8632 24.2566C15.6253 23.3962 15.4403 22.6881 15.3257 22.1325C15.1495 21.3079 14.2332 20.564 13.1496 20.564C12.4271 20.564 11.8456 20.5013 11.4227 20.3848C10.8853 20.2055 10.6122 19.8291 10.6122 19.2734V16.9701H2.45372C2.57706 15.563 2.24227 14.7563 1.45814 14.5771V13.7436H1.19383V13.0983H1V9.87179H1.17621V9.33404H1.44933V8.21373H2.08368V6.46605C2.14535 6.2868 2.3568 6.19717 2.71803 6.19717C2.65636 6.06274 2.7797 6 3.07926 6L7.4316 8.21373H17.0349C17.3807 8.16079 17.7118 8.03549 18.0076 7.84575C18.3033 7.656 18.5571 7.40594 18.753 7.11135H25.0965C25.581 8.64393 26.0656 9.56706 26.5502 9.87179L28.6294 7.84627C29.114 7.47881 29.5986 7.47881 30.0832 7.84627C30.5677 8.27647 30.6558 8.76941 30.3475 9.32508L28.1801 11.4402C28.9642 12.4261 30.4708 13.1341 32.7087 13.5643C32.7087 13.6808 32.6206 13.7436 32.4443 13.7436C30.2065 14.0573 28.9907 14.7563 28.8145 15.8677C28.5413 17.5257 27.1845 19.8291 25.5546 20.3848C25.0084 19.3362 24.4357 18.7536 23.8278 18.6281H19.6693C18.7001 18.7536 18.0129 19.4616 17.59 20.7522C17.1054 23.5127 18.0393 24.875 20.4005 24.8033C22.0304 24.624 22.9908 24.4448 23.2991 24.2566ZM15.1407 11.3954C15.1407 11.9332 15.5636 12.3634 16.0922 12.3634H21.2111C21.9335 12.3634 22.2948 12.0586 22.2948 11.4402C22.2948 10.768 21.9423 10.4275 21.2111 10.4275H16.101C15.5724 10.4275 15.1407 10.8577 15.1407 11.3954ZM15.1407 14.9446C15.1407 15.5002 15.5812 15.9573 16.1363 15.9573H21.3961C22.0569 15.9573 22.4181 15.6167 22.4798 14.9446C22.4181 14.2724 21.9952 13.9318 21.2111 13.9318H16.1451C15.5988 13.9318 15.1495 14.3799 15.1495 14.9446H15.1407Z"
+                                fill="white" />
+                        </svg>
+                    </div>
+                    <span class="h-2/5 flex items-center justify-center">FPS/TPS</span>
+                </div>
+                <div class="flex flex-col shadow-2xl items-center bg-violet-700 w-36 h-36 hover:bg-violet-900">
+                    <span class="h-2/5 flex w-full items-center justify-center">2526</span>
+                    <div class="h-3/5 flex items-center justify-center ">
+                        <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M20.0048 2L19.9758 2.03859C19.8208 2.31833 19.6174 2.78135 19.4333 3.36013C19.0459 4.49839 18.6584 6.08039 18.3291 7.65273C17.8888 9.75424 17.5076 11.8676 17.1861 13.9904C17.1861 14.1061 17.3411 14.3473 17.8351 14.5884C18.3485 14.8392 19.1331 15.0225 20.0048 15.0225C20.8766 15.0225 21.6515 14.8392 22.1746 14.5884C22.6686 14.3473 22.8139 14.1061 22.8236 13.9904L22.8042 13.9035C22.7186 13.2781 22.6218 12.6542 22.5136 12.0322C22.3005 10.8264 22.0099 9.23473 21.6709 7.65273C21.3801 6.20414 21.0148 4.77138 20.5763 3.36013C20.3826 2.78135 20.1889 2.31833 20.0242 2.03859L20.0145 2H20.0048ZM6.28881 3.54341C3.06322 5.95498 1 9.19614 1 12.7749C1 15.283 1.96865 17.6174 3.65409 19.6238L5.85292 13.2958C4.93195 11.9246 4.43364 10.3152 4.41932 8.66559C4.41932 6.80386 5.14581 5.07717 6.28881 3.54341V3.54341ZM33.7112 3.54341C34.8726 5.0017 35.5285 6.79539 35.5807 8.65595C35.5807 10.3151 35.0673 11.8875 34.1471 13.2958L36.3556 19.6141C38.0254 17.7161 38.9628 15.2884 39 12.7653C39 9.19614 36.9368 5.95498 33.7112 3.54341ZM16.6243 9.66881C13.6893 10.4116 11.6067 12.2444 10.0859 15.3408C8.06143 19.4598 7.16059 25.8842 7.13153 34.7106C10.6125 36.6674 14.5019 37.7934 18.4938 38C18.4647 34.9132 17.9319 30.0418 17.5445 26.8778C12.1201 26.3955 9.76625 24.4952 9.76625 24.4952C9.76625 24.4952 10.0665 22.2572 10.2796 21.2637C13.4128 22.3133 16.6992 22.8381 20.0048 22.8167C23.3067 22.8394 26.5895 22.3179 29.7204 21.2733C29.9335 22.2572 30.2434 24.4952 30.2434 24.4952C30.2434 24.4952 27.9671 26.4244 22.4652 26.8875C22.0777 30.0514 21.5353 34.9228 21.5159 38C25.5045 37.7919 29.3904 36.666 32.8685 34.7106C32.8491 25.8842 31.9483 19.4598 29.9238 15.3408C28.403 12.2444 26.3301 10.4116 23.3854 9.66881L23.7632 11.7428L23.8504 11.791C24.8674 12.3601 25.6036 13.209 25.7586 14.2412L26.2429 17.5788L26.1751 17.7428C25.7489 18.7942 24.6543 19.3826 23.492 19.8167C22.3296 20.2508 21.0413 20.4823 20.0048 20.492H19.9952C18.8034 20.4592 17.6253 20.2311 16.508 19.8167C15.3457 19.3826 14.2511 18.7942 13.8249 17.7428L13.7571 17.5788L14.2414 14.2412C14.3964 13.209 15.1422 12.3601 16.1593 11.791L16.2368 11.7428L16.6146 9.66881H16.6243ZM7.49962 12.5048L4.12873 22.1608L6.54066 23.2701C7.02498 19.8746 7.7999 17.0482 8.92353 14.7814C9.19475 14.2315 9.48534 13.7203 9.79531 13.2283L7.48993 12.5048H7.49962ZM32.5198 12.5048L30.2144 13.2283C30.534 13.7106 30.8246 14.2315 31.0862 14.7717C32.3175 17.4652 33.1245 20.3317 33.4787 23.2701L35.881 22.1608L32.5198 12.5145V12.5048ZM15.6362 14.0482C15.5878 14.1833 15.5491 14.3087 15.5394 14.4341L15.1035 17.3666C15.336 17.7621 16.0431 18.2733 16.973 18.6206C17.9804 18.9871 19.1815 19.1994 20.0145 19.1994C20.8476 19.1994 22.0487 18.9871 23.0561 18.6206C23.7898 18.3953 24.4402 17.959 24.9256 17.3666L24.4897 14.4244C24.4731 14.2987 24.4406 14.1755 24.3928 14.0579L24.1119 14.1543C24.0344 14.8778 23.4339 15.4084 22.7461 15.746C22.0003 16.1029 21.051 16.3055 20.0145 16.3055C18.9684 16.3055 18.0191 16.1125 17.2829 15.746C16.5855 15.4084 15.9946 14.8778 15.9075 14.1447L15.6362 14.0482V14.0482Z"
+                                fill="white" />
+                        </svg>
+                    </div>
+                    <span class="h-2/5 flex items-center justify-center">RPG</span>
+                </div>
+                <div class="flex flex-col shadow-2xl items-center bg-violet-700 w-36 h-36 hover:bg-violet-900">
+                    <span class="h-2/5 flex w-full items-center justify-center">2395</span>
+                    <div class="h-3/5 flex items-center justify-center ">
+                        <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M27.6018 5H31.3892V8.73892H27.6018V5ZM8.60178 5H12.3982V8.73892H8.60178V5ZM8.60178 31.2434H12.3982V35H8.60178V31.2434ZM27.6018 31.2434H31.3892V35H27.6018V31.2434Z"
+                                fill="white" />
+                            <path
+                                d="M39 23.7478V27.4955H35.1946V23.7478H31.3982V27.4955H27.6018V31.2522H23.7964V27.4955H16.2036V31.2522H12.3982V27.4955H8.60179V23.7478H4.80539V27.4955H1V20H4.80539V16.2522H8.60179V12.4955H12.3982V8.74776H16.2036V12.4955H23.7964V8.74776H27.6018V12.4955H31.3982V16.2522H35.1946V20H39V23.7478V23.7478ZM27.6018 20V16.2522H23.7964V20H27.6018V20ZM16.2036 20V16.2522H12.3982V20H16.2036Z"
+                                fill="white" />
+                        </svg>
+                    </div>
+                    <span class="h-2/5 flex items-center justify-center">Indie</span>
+                </div>
+                <div class="flex flex-col shadow-2xl items-center bg-violet-700 w-36 h-36 hover:bg-violet-900">
+                    <span class="h-2/5 flex w-full items-center justify-center">1982</span>
+                    <div class="h-3/5 flex items-center justify-center ">
+                        <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M20.218 1.01024C17.7155 0.951459 15.2266 1.39925 12.8977 2.32728C10.5687 3.25532 8.44663 4.64488 6.65619 6.4143C4.86574 8.18372 3.44304 10.2973 2.47171 12.6308C1.50037 14.9643 1 17.4707 1 20.0026C1 22.5345 1.50037 25.0408 2.47171 27.3743C3.44304 29.7078 4.86574 31.8214 6.65619 33.5908C8.44663 35.3602 10.5687 36.7498 12.8977 37.6778C15.2266 38.6059 17.7155 39.0537 20.218 38.9949C25.1993 38.9949 29.9766 36.9934 33.4989 33.4307C37.0212 29.8679 39 25.0359 39 19.9974C39 14.959 37.0212 10.1269 33.4989 6.56422C29.9766 3.00151 25.1993 1 20.218 1V1.01024ZM20.218 4.00067C27.4676 4.00067 33.5122 8.95742 35.3854 15.6859H32.2466C31.4109 14.1609 30.1873 12.8897 28.7026 12.0038C27.2179 11.1179 25.5261 10.6495 23.8023 10.6472H16.7249C13.0799 10.6472 9.9411 12.6955 8.28059 15.6859H5.30382C5.2127 15.6859 5.14182 15.7269 5.0507 15.7371C5.95971 12.371 7.93593 9.39973 10.6759 7.27954C13.4159 5.15934 16.7682 4.00743 20.218 4.00067V4.00067ZM16.7553 12.7979H23.6808C25.5149 12.7979 27.2738 13.5348 28.5707 14.8466C29.8676 16.1584 30.5962 17.9375 30.5962 19.7926V19.9053L30.414 20.2944L30.0191 21.042C29.6031 21.8366 29.1364 22.6029 28.6218 23.3361C27.0828 25.4867 25.4324 26.7976 23.6808 26.7976H16.7451C14.9935 26.7976 13.3431 25.4867 11.8041 23.3361C11.0388 22.2591 10.3776 21.1102 9.82972 19.9053V19.8029C9.82839 18.8834 10.0063 17.9728 10.3532 17.1229C10.7002 16.2731 11.2093 15.5008 11.8516 14.8502C12.4939 14.1996 13.2567 13.6835 14.0964 13.3313C14.9361 12.9791 15.8361 12.7979 16.7451 12.7979H16.7553ZM16.7553 13.8015C13.5152 13.8015 10.8827 16.4437 10.8422 19.7209L10.903 19.8541C11.3957 20.8671 11.9715 21.8365 12.6242 22.7523C13.9911 24.6572 15.4086 25.794 16.7553 25.794H23.6808C25.0274 25.794 26.4449 24.6674 27.8118 22.7523C28.467 21.8382 29.0429 20.8685 29.5331 19.8541L29.5938 19.7209C29.5752 18.1462 28.9443 16.6422 27.8377 15.5344C26.7311 14.4266 25.2378 13.8041 23.6808 13.8015H16.7451H16.7553ZM20.218 15.5118C20.7845 15.5118 21.3453 15.6246 21.8686 15.8439C22.392 16.0631 22.8674 16.3845 23.268 16.7896C23.6685 17.1947 23.9862 17.6757 24.203 18.205C24.4197 18.7343 24.5313 19.3016 24.5313 19.8745C24.5313 20.4475 24.4197 21.0148 24.203 21.5441C23.9862 22.0734 23.6685 22.5544 23.268 22.9595C22.8674 23.3646 22.392 23.686 21.8686 23.9052C21.3453 24.1245 20.7845 24.2373 20.218 24.2373C19.0741 24.2373 17.977 23.7777 17.1681 22.9595C16.3592 22.1413 15.9048 21.0316 15.9048 19.8745C15.9048 18.7175 16.3592 17.6078 17.1681 16.7896C17.977 15.9714 19.0741 15.5118 20.218 15.5118V15.5118ZM20.218 16.5154C19.3372 16.5154 18.4925 16.8693 17.8697 17.4993C17.2469 18.1292 16.897 18.9837 16.897 19.8745C16.897 20.7654 17.2469 21.6198 17.8697 22.2498C18.4925 22.8798 19.3372 23.2337 20.218 23.2337C21.0988 23.2337 21.9435 22.8798 22.5663 22.2498C23.1892 21.6198 23.539 20.7654 23.539 19.8745C23.539 18.9837 23.1892 18.1292 22.5663 17.4993C21.9435 16.8693 21.0988 16.5154 20.218 16.5154V16.5154ZM4.59507 22.0457C4.82795 22.0969 5.04057 22.1891 5.2937 22.1891H9.4551C9.62069 23.5078 10.1078 24.7641 10.8726 25.8452L7.95659 30.0133C6.12511 27.7255 4.96097 24.9661 4.59507 22.0457V22.0457ZM35.8005 22.1071C35.4207 25.012 34.2498 27.7529 32.4187 30.0236L29.5634 25.9271C30.3701 24.8308 30.8859 23.544 31.062 22.1891H35.436C35.5676 22.1891 35.679 22.1276 35.8005 22.1071V22.1071ZM14.7606 28.7434C15.5706 29.0302 16.4414 29.2145 17.3526 29.2145H23.1745C24.0453 29.2145 24.8553 29.0404 25.6451 28.7742L28.8547 33.3725C26.2825 35.0807 23.2718 35.9892 20.1947 35.9855C17.1177 35.9819 14.1091 35.0663 11.5409 33.352L14.7606 28.7434V28.7434Z"
+                                fill="white" />
+                        </svg>
+                    </div>
+                    <span class="h-2/5 flex items-center justify-center">Simulación</span>
+                </div>
+                <div class="flex flex-col shadow-2xl items-center bg-violet-700 w-36 h-36 hover:bg-violet-900">
+                    <span class="h-2/5 flex w-full items-center justify-center">1925</span>
+                    <div class="h-3/5 flex items-center justify-center ">
+                        <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M28.3728 1.00941C28.2128 0.971755 26.6596 3.18425 25.8219 4.05042C24.3347 3.39138 21.5014 1.91324 21.379 2.05447C21.3131 2.12037 22.8474 4.56824 24.0429 7.44919L19.9294 8.45658L13.7733 4.78478L10.2811 8.852C8.10676 6.17818 5.70646 4.05042 5.61234 4.09749C5.45232 4.17281 5.72529 6.87488 5.6594 8.07057C4.10627 8.54131 1 9.28509 1 9.45455C1 9.55812 4.32276 10.5843 7.36314 12.2319L3.22145 17.0335L5.05697 31.8149L16.8608 28.6421L19.374 30.751C16.3054 31.749 13.5192 32.2291 13.5004 32.3327C13.4815 32.5398 16.842 33.8202 18.5081 34.5734C18.4139 35.9198 17.708 38.8948 17.868 38.9984C17.9621 39.0643 20.9272 37.0684 23.7416 34.4228L28.9846 38.8384H31.2437L24.7771 33.406C26.0652 32.1571 27.1683 30.7304 28.0528 29.1693C28.3634 29.3858 28.9282 30.5721 29.1353 30.5344C29.4459 30.4874 30.9519 23.8593 30.7072 23.6616C30.3401 23.398 24.0899 25.94 24.1182 26.0906C24.137 26.2224 25.4548 26.8156 26.0572 27.2581C24.8524 28.482 22.9415 29.4517 20.9648 30.1955L17.2185 27.0415L6.29007 29.979L4.73693 17.4949L8.63389 12.9757C9.70656 13.6111 10.6592 14.4301 11.4484 15.3953C10.8648 15.706 9.63166 16.0732 9.60342 16.1956C9.56577 16.318 14.7617 19.3025 15.11 19.0954C15.3547 18.9636 14.8088 12.9475 14.5452 12.8722C14.3569 12.8157 13.7263 13.7948 13.4157 13.9549C12.8587 12.5456 12.1078 11.2211 11.1848 10.0194L14.084 6.65834L19.6941 10.01L24.57 8.81434C25.1348 10.396 25.5113 12.0154 25.4171 13.3711C24.7677 13.2299 23.6004 12.7027 23.4969 12.7686C23.3934 12.8439 25.3795 18.4928 25.7748 18.5681C26.0572 18.6246 29.5588 13.7101 29.4082 13.4841C29.3141 13.3241 28.1845 13.6442 27.8551 13.5783C28.4763 11.9589 28.7305 9.82173 28.7964 7.77871L33.0604 6.74307L39 11.008V9.21918L33.3617 5.17079L28.8152 6.27233C28.7964 3.40079 28.4669 1.02824 28.3728 1V1.00941Z"
+                                fill="white" />
+                        </svg>
+                    </div>
+                    <span class="h-2/5 flex items-center justify-center">Estrategia</span>
+                </div>
+                <div id="act18-1"
+                    class="hidden flex flex-col shadow-2xl items-center bg-violet-700 w-36 h-36 hover:bg-violet-900">
+                    <span class="h-2/5 flex w-full items-center justify-center">974</span>
+                    <div class="h-3/5 flex items-center justify-center ">
+                        <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M29.5423 1L28.3013 1.28437L28.4368 1.9163L29.6153 7.12971L27.7486 6.83481L26.8934 6.69789L27.4148 9.01497L29.2816 9.3204L30.1367 9.45732L30.7416 12.1641L32.3893 19.5155L32.9942 22.2223L31.1275 21.9169L30.2723 21.7905L30.7937 24.1075L32.6605 24.4024L33.5156 24.5394L36.613 38.3681L36.7486 39L38 38.7156L37.854 38.0837L29.6883 1.63193L29.5423 1V1ZM30.7937 24.1075C29.902 23.9618 29.0042 23.8564 28.1031 23.7916L28.6976 26.4246L28.7393 26.4351C29.0179 26.4659 29.296 26.501 29.5736 26.5405L30.0324 26.6037L31.0753 26.7616L31.3986 26.8143L30.7937 24.1075V24.1075ZM28.1031 23.7916L27.5817 21.4008C26.7162 21.2701 25.8354 21.2844 24.9745 21.4429L25.5272 23.9601C26.3728 23.7751 27.2404 23.7148 28.1031 23.781V23.7916ZM25.5272 23.9601C24.7034 24.1391 23.9525 24.4551 23.1286 24.9185L23.7231 27.5516C24.4468 27.0685 25.2425 26.7058 26.08 26.4773H26.0904L25.5272 23.9496V23.9601ZM23.1286 24.9185L22.5968 22.5383C21.971 22.9279 21.2306 23.4335 20.3129 24.0654L20.8343 26.3825C21.5771 25.8602 22.3426 25.3717 23.1286 24.9185V24.9185ZM20.8343 26.393L19.2804 27.4568L18.5713 27.9518L19.1761 30.6269L20.6257 29.6159C20.9073 29.4052 21.1784 29.2262 21.4392 29.0577L20.8343 26.3825V26.393ZM18.5713 27.9518L18.0498 25.6347C17.1947 26.2245 16.4438 26.709 15.7555 27.0987L16.2978 29.4684C16.9235 29.0892 17.664 28.5837 18.5713 27.9518V27.9518ZM16.2978 29.4684C15.3175 30.0793 14.6083 30.4163 13.92 30.5743L14.4832 33.0915C15.3261 32.8859 16.1343 32.5559 16.8818 32.112L16.2978 29.4789V29.4684ZM13.92 30.5743L13.3569 28.0571C12.533 28.2467 11.7196 28.2888 10.781 28.2361L11.3129 30.6059C12.46 30.7323 13.2422 30.7323 13.92 30.5743ZM11.3129 30.6059C10.5829 30.5322 9.69641 30.3952 8.61182 30.2267L9.21669 32.9335C9.21669 32.9335 10.4994 33.1652 11.9073 33.26L11.3129 30.6059ZM8.61182 30.2267L8.09038 27.9096L6.23407 27.6147C5.92121 27.5621 5.65006 27.5094 5.37891 27.4778L5.90035 29.7949L7.75666 30.0898L8.61182 30.2267ZM8.09038 27.9096C9.12283 28.0676 9.99884 28.1835 10.781 28.2256L10.1866 25.582C9.45655 25.4978 8.5701 25.3714 7.48552 25.2029L8.09038 27.9096ZM7.48552 25.2029L6.96408 22.8858C6.3905 22.7805 5.78563 22.6857 5.10776 22.5804L4.25261 22.4435L4.77404 24.7605C5.34762 24.8659 5.95249 24.9501 6.63036 25.066L7.48552 25.2029ZM6.96408 22.8858C7.99652 23.0333 8.87254 23.1596 9.65469 23.2018L9.06026 20.5477C8.33024 20.4739 7.4438 20.337 6.35921 20.1685L6.96408 22.8753V22.8858ZM6.35921 20.1685L5.83778 17.8514L3.98146 17.5565C3.6686 17.5039 3.39745 17.4512 3.1263 17.4196L3.64774 19.7367L5.50406 20.0316C5.81692 20.0843 6.08806 20.1369 6.35921 20.1685ZM5.83778 17.8514C6.87022 18.0094 7.74623 18.1253 8.52839 18.1674L7.93395 15.5238C7.20394 15.4396 6.3175 15.3132 5.23291 15.1447L5.83778 17.8514ZM5.23291 15.1447L4.71147 12.8276C4.13789 12.7223 3.53302 12.6275 2.85516 12.5222L2 12.3853L2.52144 14.7023C3.09502 14.8077 3.69988 14.8919 4.37775 15.0078L5.23291 15.1447V15.1447ZM4.71147 12.8276C5.74392 12.9751 6.61993 13.1014 7.40209 13.1436L6.80765 10.4895H6.77636L6.56779 10.4684L6.36964 10.4473C5.61417 10.3466 4.85978 10.2378 4.1066 10.1208L4.71147 12.8171V12.8276ZM7.40209 13.1436L7.93395 15.5238C9.08111 15.6397 9.86327 15.6397 10.5411 15.4817L9.97798 12.9751C9.15411 13.1541 8.34067 13.1962 7.40209 13.1436ZM9.97798 12.9751C10.8197 12.7709 11.6277 12.4446 12.3766 12.0061L11.7926 9.352C10.8123 9.96286 10.1031 10.2999 9.41483 10.4579L9.97798 12.9751V12.9751ZM9.42526 10.4473L9.41483 10.4579L9.42526 10.4473ZM12.387 12.0061L12.9085 14.3864C13.5342 13.9967 14.2851 13.4911 15.1924 12.8697L14.6709 10.5527C13.8158 11.1319 13.0649 11.6269 12.3766 12.0061H12.387ZM14.6813 10.5421L16.2248 9.46785L16.934 8.97284L16.3291 6.26608L14.7752 7.34036L14.066 7.83537L14.6709 10.5421H14.6813ZM16.934 8.97284L17.4554 11.2899C18.321 10.7106 19.0614 10.2156 19.7497 9.83648L19.2178 7.45621C18.5921 7.8459 17.8413 8.35144 16.934 8.97284V8.97284ZM19.2178 7.45621C20.1981 6.84534 20.9073 6.50832 21.5852 6.35033L21.022 3.84368C20.1877 4.03326 19.4473 4.34922 18.6234 4.80211L19.2178 7.45621ZM21.5852 6.35033L22.1483 8.87805C22.9939 8.69291 23.8615 8.6326 24.7242 8.699L24.2028 6.31874C23.3379 6.18461 22.457 6.19529 21.5956 6.35033H21.5852V6.35033ZM24.1924 6.31874C24.9224 6.39246 25.8088 6.52938 26.9038 6.69789L26.2885 3.99113C26.2885 3.99113 25.0058 3.75942 23.5979 3.67517L24.1924 6.31874V6.31874ZM24.7242 8.699L25.3187 11.3426C26.0487 11.4268 26.9351 11.5532 28.0301 11.7323L27.4148 9.0255C26.5232 8.87626 25.6255 8.76732 24.7242 8.699V8.699ZM28.0197 11.7323L28.5411 14.0493L30.4079 14.3442L31.2526 14.4812L30.7312 12.1641L28.8749 11.8586L28.0197 11.7323V11.7323ZM28.5411 14.0493C27.5191 13.8914 26.6327 13.7755 25.8505 13.7334L26.445 16.3664C27.175 16.4507 28.0614 16.5771 29.1564 16.7561L28.5411 14.0493V14.0493ZM29.146 16.7561L29.6674 19.0732L31.5342 19.3786L32.3893 19.5155L31.8679 17.1879L30.0012 16.893L29.146 16.7561V16.7561ZM29.6674 19.0732C28.6454 18.9152 27.759 18.7993 26.9768 18.7572L27.5713 21.4008C28.3013 21.485 29.1877 21.6114 30.2827 21.7905L29.6674 19.0837V19.0732ZM26.9768 18.7572L26.4554 16.3769C25.5905 16.243 24.7097 16.2537 23.8482 16.4085L24.4009 18.9363C25.2465 18.7511 26.1141 18.6908 26.9768 18.7572V18.7572ZM24.4009 18.9257C23.5771 19.1153 22.8262 19.4313 22.0023 19.8947L22.5968 22.5383C23.5771 21.9379 24.2862 21.5904 24.9641 21.4429L24.4009 18.9257ZM22.0023 19.8947L21.4705 17.5144C20.8447 17.9041 20.1043 18.4096 19.1866 19.031L19.708 21.3481C20.5736 20.7688 21.314 20.2738 22.0023 19.8947V19.8947ZM19.6976 21.3586L18.1437 22.4329L17.4345 22.9279L18.0394 25.6347L19.6037 24.5499L20.3024 24.0654L19.6976 21.3586V21.3586ZM17.4345 22.9279L16.9131 20.6109C16.0579 21.1901 15.3071 21.6851 14.6188 22.0643L15.1611 24.4446C15.7868 24.0549 16.5272 23.5493 17.4345 22.9279V22.9279ZM15.1611 24.4446C14.1808 25.0449 13.4716 25.3925 12.7833 25.5399L13.3465 28.0571C14.1876 27.8563 14.9956 27.5335 15.7451 27.0987L15.1611 24.4446ZM12.7833 25.5399L12.2202 23.0333C11.3963 23.2123 10.5829 23.2544 9.64426 23.2018L10.1761 25.582C11.3233 25.6979 12.1054 25.6979 12.7833 25.5399V25.5399ZM12.2202 23.0333C13.0619 22.8292 13.8699 22.5028 14.6188 22.0643L14.0348 19.4102C13.0545 20.0211 12.3453 20.3581 11.657 20.5161L12.2202 23.0333ZM11.657 20.5055L11.0939 17.9989C10.27 18.1885 9.45655 18.2306 8.51796 18.1779L9.04983 20.5477C10.197 20.6741 10.9791 20.6741 11.657 20.5161V20.5055ZM11.0939 17.9989C11.935 17.7981 12.743 17.4753 13.4925 17.0405L12.9085 14.3864C11.9282 14.9867 11.219 15.3343 10.5307 15.4817L11.0939 18.0094V17.9989ZM13.4925 17.0405L14.0348 19.4102C14.6605 19.031 15.4009 18.5255 16.3082 17.8936L15.7868 15.5765C14.9316 16.1663 14.1808 16.6508 13.4925 17.0405ZM15.7868 15.566C16.2665 15.25 16.7671 14.8919 17.3511 14.4917L18.0498 14.0072L17.445 11.3004C16.9652 11.6164 16.4647 11.9745 15.8911 12.3747L15.1819 12.8697L15.7868 15.5765V15.566ZM18.0498 14.0072L18.5713 16.3243C19.4368 15.7345 20.1773 15.2395 20.8656 14.8603L20.3337 12.48C19.708 12.8697 18.9676 13.3753 18.0498 14.0072ZM20.3337 12.48C21.314 11.8797 22.0232 11.5322 22.701 11.3847L22.1379 8.86752C21.314 9.0571 20.5632 9.37306 19.7393 9.83648L20.3337 12.48V12.48ZM22.701 11.3847L23.2642 13.9019C24.1097 13.7167 24.9774 13.6564 25.8401 13.7228L25.3187 11.3426C24.4532 11.2119 23.5723 11.2262 22.7115 11.3847H22.701ZM23.2642 13.9019C22.4403 14.0915 21.6895 14.4074 20.8656 14.8603L21.46 17.5144C22.4403 16.9035 23.1495 16.5665 23.8273 16.4085L23.2642 13.9019ZM18.5713 16.3243L17.0174 17.3986L16.3082 17.8936L16.9131 20.6003L18.4774 19.5261L19.1761 19.031L18.5713 16.3243V16.3243Z"
+                                fill="white" />
+                        </svg>
+                    </div>
+                    <span class="h-2/5 flex items-center justify-center">Carreras</span>
+                </div>
+                <div id="act18-2"
+                    class="hidden flex flex-col shadow-2xl items-center bg-violet-700 w-36 h-36 hover:bg-violet-900">
+                    <span class="h-2/5 flex w-full items-center justify-center">639</span>
+                    <div class="h-3/5 flex items-center justify-center ">
+                        <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M32.91 21.895L38.0117 14.7401L30.8622 13.8034L34.0942 4.71453L24.4072 10.1002L21.9231 2.0954L17.6495 9.51048L9.60965 2L11.4438 12.3724C7.91799 11.8347 4.51687 11.3144 1 10.7767L8.51453 19.3279C6.28866 21.3226 4.0806 23.2912 1.82802 25.3293L10.4377 27.2113L7.29475 34.0453L11.2123 33.0306C11.2123 33.0306 12.993 27.7143 13.8299 26.4567C14.2127 25.893 14.2484 25.3727 14.1237 24.7309C13.5895 22.0858 13.1087 19.4406 12.6101 16.7868C12.5745 16.6394 12.5656 16.5266 12.7259 16.4312C14.6401 15.1303 15.6195 14.7834 18.6022 12.7193L22.7423 17.3505L21.3177 18.6167C21.2821 18.6514 21.1931 18.6687 21.1396 18.6514C20.6143 18.504 20.0979 18.3565 19.5815 18.1917C18.9583 17.628 18.4864 17.0036 17.9967 16.5266C17.8632 17.021 17.7296 17.4806 17.6139 17.9576C18.3261 18.8075 18.5042 19.059 18.9583 19.4926C19.0473 19.5794 19.1097 19.7268 19.1097 19.8395C19.2254 22.2939 19.1542 24.6962 19.2788 26.8123L20.0801 27.0291C20.0267 24.384 19.9822 21.7735 19.9021 19.1544C20.0801 19.1544 20.2315 19.2325 20.3561 19.458C21.9231 21.9557 23.3299 24.4187 24.7277 26.6996L25.44 26.3006C25.3154 26.6562 24.9058 27.1506 24.6921 27.4541C23.9442 28.5989 22.6978 29.1626 21.6649 29.8477C20.4185 31.7644 19.4213 33.7331 18.62 35.0947L19.8041 38C19.8308 38.0087 21.8875 34.9646 22.9025 33.4122L27.9419 37.7658L28.3158 28.3734L39 29.2667L32.91 21.895ZM19.8219 12.8147C20.8404 12.1979 21.8613 11.585 22.8847 10.9761L24.3716 13.5259L21.8074 15.0696L19.813 12.8147H19.8219ZM23.8908 17.3939C23.3922 16.8215 22.8936 16.2664 22.3594 15.6767C23.2498 15.1563 24.1223 14.6273 25.0127 14.0896L26.3749 16.4139C25.0394 17.2291 23.7038 18.0183 22.4039 18.7988C22.4039 18.7815 22.3861 18.7728 22.3683 18.7641C22.8758 18.3132 23.3744 17.8709 23.8908 17.3939ZM21.8074 20.0911L26.7043 17.1597L28.1467 19.6227L23.2498 22.5541L21.8074 20.0911ZM25.0305 25.5982L23.6682 23.2566L28.2624 20.4987L29.6246 22.8403L25.0305 25.5982Z"
+                                fill="white" />
+                        </svg>
+                    </div>
+                    <span class="h-2/5 flex items-center justify-center">Lucha</span>
+                </div>
+                <div id="act18-3"
+                    class="hidden flex flex-col shadow-2xl items-center bg-violet-700 w-36 h-36 hover:bg-violet-900">
+                    <span class="h-2/5 flex w-full items-center justify-center">543</span>
+                    <div class="h-3/5 flex items-center justify-center ">
+                        <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M16.5327 1C19.5654 2.15211 22.4216 3.72638 25.0177 5.67662L28.8241 12.1642C25.3955 8.24533 21.0767 5.21357 16.2333 3.32563C11.39 1.43769 6.16469 0.74918 1 1.31841L1 2.8209C5.18234 2.33141 9.42025 2.70943 13.4511 3.93151C17.4819 5.15359 21.2197 7.1937 24.4329 9.92537L27.813 17.7264C24.898 13.412 20.8497 9.99216 16.117 7.84595C11.3843 5.69975 6.15195 4.91101 1 5.56716L1 7.0796C8.90017 5.98507 16.6616 8.56219 22.3215 13.6667L24.7897 20.7114C22.307 16.7706 18.7363 13.6396 14.5123 11.6998C10.2884 9.75995 5.59369 9.09505 1 9.78607V11.2985C4.58923 10.7145 8.26613 11.0163 11.7132 12.1778C15.1602 13.3393 18.2738 15.3256 20.7851 17.9652L22.4405 24.7015C20.5261 20.8006 17.3979 17.6319 13.5293 15.6749C9.66076 13.718 5.26242 13.0794 1 13.8557L1 15.3781C4.42625 14.697 7.97487 15.009 11.231 16.2776C14.4871 17.5463 17.3162 19.7192 19.3875 22.5423L19.7641 28.4229C18.4524 24.6747 15.8206 21.5374 12.3644 19.6021C8.90819 17.6667 4.86625 17.0668 1 17.9154L1 19.4577C3.93682 18.7362 7.02395 18.9425 9.83956 20.0484C12.6552 21.1544 15.0619 23.1061 16.731 25.6368L17.2068 30.2438C19.0703 29.7463 21.0032 29.1891 22.6883 28.5721C24.2247 28.0149 25.5629 27.408 26.4154 26.8109C26.8416 26.5124 27.139 26.2139 27.3075 25.9652C27.4661 25.7164 27.5057 25.5473 27.476 25.3483L27.3769 24.7015L38.3201 21.5274C35.2221 12.5647 28.7294 5.18913 20.2499 1H16.5327V1ZM38.7959 22.9502L35.5843 23.8856C35.6849 25.3909 35.2179 26.8791 34.2759 28.0547C32.9198 29.6954 31.221 31.0167 29.2999 31.9254C25.6818 33.796 20.9536 35.1095 16.166 35.7662L16.5228 37.0796C22.0043 36.4627 27.9617 35.3085 32.343 33.1891C34.7814 31.995 36.7044 30.5323 37.8344 28.7512C38.371 27.8971 38.7323 26.9441 38.8974 25.948C39.0625 24.9519 39.028 23.9328 38.7959 22.9502V22.9502ZM34.1272 24.3035L28.9331 25.806C28.8736 26.1542 28.7349 26.4925 28.5564 26.7811C28.21 27.2773 27.7727 27.7027 27.2678 28.0348C26.2171 28.7811 24.7897 29.408 23.2037 29.9851C20.6464 30.9104 17.7321 31.6766 15.254 32.3234L15.7794 34.3134C20.4977 33.6866 25.1763 32.3731 28.6159 30.592C30.5984 29.5672 32.1546 28.3831 33.0864 27.1493C33.7546 26.3523 34.1229 25.3452 34.1272 24.3035V24.3035ZM13.222 30.5124L10.5853 31.2189L11.2395 33.6766C11.5821 33.7987 11.8899 34.0027 12.1364 34.271C12.3829 34.5392 12.5607 34.8637 12.6544 35.2163C12.748 35.5689 12.7548 35.9391 12.6741 36.295C12.5934 36.6508 12.4276 36.9816 12.1911 37.2587L12.5678 38.6517L15.2045 37.9552L13.222 30.5124V30.5124ZM10.4762 35.0398C10.3634 35.0388 10.2518 35.0626 10.1491 35.1095L4.10258 36.7313C4.37313 37.1652 4.5014 37.6733 4.46934 38.1841L10.5357 36.5522C10.9322 36.5224 11.2296 36.204 11.2296 35.796C11.2309 35.6963 11.2123 35.5974 11.175 35.5051C11.1376 35.4127 11.0821 35.3288 11.0119 35.2583C10.9417 35.1878 10.8581 35.1322 10.7661 35.0946C10.6741 35.0571 10.5755 35.0385 10.4762 35.0398V35.0398ZM2.02098 37.0597C1.89351 37.057 1.76682 37.0801 1.64841 37.1275C1.53 37.175 1.42229 37.2458 1.33168 37.3358C1.24107 37.4258 1.16941 37.5332 1.12094 37.6516C1.07248 37.77 1.04821 37.8969 1.04956 38.0249C1.04956 38.5721 1.47579 39 2.02098 39C2.56616 39 2.98248 38.5721 2.98248 38.0249C2.9838 37.8978 2.95984 37.7717 2.91199 37.6539C2.86414 37.5362 2.79336 37.4293 2.70382 37.3394C2.61427 37.2495 2.50774 37.1785 2.39049 37.1305C2.27324 37.0824 2.14761 37.0584 2.02098 37.0597V37.0597Z"
+                                fill="white" />
+                        </svg>
+                    </div>
+                    <span class="h-2/5 flex items-center justify-center">Hack & Slash</span>
+                </div>
+                <div id="act18-4"
+                    class="hidden flex flex-col shadow-2xl items-center bg-violet-700 w-36 h-36 hover:bg-violet-900">
+                    <span class="h-2/5 flex w-full items-center justify-center">525</span>
+                    <div class="h-3/5 flex items-center justify-center ">
+                        <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M19.326 1C14.7922 1.1542 10.4644 2.93138 7.13007 6.00817L15.9775 14.8474C18.759 11.7012 20.0107 7.02478 19.326 1ZM20.9307 1C21.6047 7.30301 20.2354 12.461 17.1115 15.9817L20 18.871L32.8592 6.00817C29.5926 2.99371 25.37 1.22464 20.9307 1.0107V1ZM6.00676 7.13179C2.93083 10.4671 1.15416 14.7961 1 19.3312C7.01239 20.0054 11.6982 18.7426 14.8542 15.9817L6.00676 7.13179ZM33.9825 7.13179L21.1233 19.9947L24.0118 22.884C27.0073 20.2301 31.1796 18.8389 36.2292 18.9031C37.1171 18.9031 38.0479 18.9673 38.9893 19.0636C38.7725 14.6218 37.0001 10.3978 33.9825 7.13179V7.13179ZM15.9775 17.1053C12.4685 20.2408 7.31194 21.5998 1.0107 20.9257C1.2221 25.3699 2.99083 29.5979 6.00676 32.8682L18.8767 19.9947L15.9882 17.1053H15.9775ZM35.8761 20.4869C31.3401 20.4869 27.7241 21.7496 25.1458 24.0183L33.9825 32.8682C37.0624 29.5345 38.8429 25.2053 39 20.6688C37.9595 20.5484 36.9129 20.4876 35.8654 20.4869H35.8761ZM20 21.129L7.14077 33.9918C10.4074 37.0063 14.63 38.7754 19.0693 38.9893C18.3953 32.697 19.7646 27.539 22.8885 24.0076L20 21.1183V21.129ZM24.0225 25.1419C21.2517 28.2988 19.9893 32.9859 20.674 39C25.2078 38.8458 29.5356 37.0686 32.8699 33.9918L24.0225 25.1419V25.1419Z"
+                                fill="white" />
+                        </svg>
+                    </div>
+                    <span class="h-2/5 flex items-center justify-center">Deportes</span>
+                </div>
+                <div id="act18-5"
+                    class="hidden flex flex-col shadow-2xl items-center bg-violet-700 w-36 h-36 hover:bg-violet-900">
+                    <span class="h-2/5 flex w-full items-center justify-center">508</span>
+                    <div class="h-3/5 flex items-center justify-center ">
+                        <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M38.2073 21.2367H24.7479V18.6863C25.136 18.7719 25.5241 18.8318 25.9122 18.8318C26.2425 18.8318 26.7379 18.712 27.2003 18.1471C28.1417 16.9746 28.5628 14.3899 28.1747 12.1391C27.7627 9.62733 26.4317 7.37714 24.4589 5.85718C22.8075 4.57342 21.0322 4 20 4C18.9596 4 17.1843 4.58197 15.5411 5.85718C13.5683 7.37714 12.2373 9.62733 11.8253 12.1391C11.4372 14.3985 11.8583 16.9746 12.7997 18.1385C13.2621 18.712 13.7492 18.8318 14.0795 18.8318C14.4924 18.8318 14.8722 18.7719 15.2521 18.6777V21.2281H1.7927C1.58246 21.2281 1.38084 21.3147 1.23218 21.4688C1.08352 21.6229 1 21.8318 1 22.0497V35.1784C1 35.632 1.35506 36 1.7927 36H38.2073C38.6449 36 39 35.632 39 35.1784V22.0497C39 21.8318 38.9165 21.6229 38.7678 21.4688C38.6192 21.3147 38.4175 21.2281 38.2073 21.2281V21.2367ZM37.4146 25.3362H35.8292V22.8628H37.4146V25.3276V25.3362ZM30.2886 25.3362V22.8628H34.2521V25.3276H30.2886V25.3362ZM28.7032 25.3362H27.126V22.8628H28.7032V25.3276V25.3362ZM27.126 26.9708H31.4776V30.2573H27.126V26.9708ZM34.2521 31.8919V34.3568H30.2886V31.8919H34.2521ZM33.063 30.2573V26.9708H37.4146V30.2573H33.063ZM26.5398 15.6908C26.3086 16.735 25.9865 17.1201 25.8792 17.1886C25.3837 17.1886 24.8057 17.0174 24.1947 16.8462L24.1782 16.8377C24.4424 15.0062 25.8049 14.1075 26.7379 13.7053C26.7379 14.3899 26.6801 15.0746 26.5398 15.6908ZM16.4907 7.16662L16.7549 6.96978C17.1678 7.85986 17.6632 9.3747 17.11 10.3161C16.6393 11.1121 15.4337 11.5143 13.5841 11.5057C14.0696 9.76913 15.0905 8.24509 16.4907 7.16662ZM13.452 15.6908C13.2713 14.8516 13.2156 13.9886 13.2868 13.1319L13.6832 13.1404C16.0943 13.1404 17.6962 12.4814 18.4641 11.172C19.4633 9.44317 18.6293 7.20941 18.1339 6.16528C18.9348 5.78871 19.6202 5.64322 19.9917 5.64322C20.6193 5.64322 22.0643 6.05403 23.5011 7.16662C24.6076 8.03102 26.003 9.56298 26.5398 12.0278C26.1021 12.1904 25.5324 12.4557 24.9626 12.8409C24.3502 13.242 23.8262 13.7726 23.425 14.3979C23.0237 15.0231 22.7542 15.7291 22.6341 16.4696L22.5598 16.4525C21.9983 16.3841 21.0074 16.3498 19.9174 16.3498C18.8192 16.3498 17.8283 16.3841 17.2668 16.4525C16.6888 16.5296 16.1686 16.6922 15.6649 16.8462C15.1117 17.0174 14.5915 17.1886 14.1126 17.1886C14.0135 17.1201 13.6832 16.735 13.452 15.6908ZM16.8375 18.207C17.0439 18.1557 17.2503 18.1129 17.4485 18.0872C17.9439 18.0273 18.8935 17.9845 19.9092 17.9845C20.9331 17.9845 21.8827 18.0273 22.3781 18.0872C22.6258 18.1129 22.89 18.1728 23.1625 18.2498V21.2281H16.8375V18.207ZM5.73968 25.3447V22.8628H9.70317V25.3276H5.73968V25.3447ZM6.92873 26.9794V30.2658H2.5854V26.9708H6.92873V26.9794ZM9.69491 31.9005V34.3653H5.74794V31.9005H9.71143H9.69491ZM11.2803 31.9005H12.8657V34.3653H11.2803V31.9005ZM12.8657 30.2658H8.52238V26.9708H12.874V30.2573L12.8657 30.2658ZM12.8657 25.3447H11.2803V22.8628H12.8657V25.3276V25.3447ZM4.16254 22.8628V25.3276H2.5854V22.8628H4.16254ZM2.5854 31.8919H4.16254V34.3568H2.5854V31.8919ZM14.4594 22.8714H25.5324V34.3568H14.4676V22.8714H14.4594ZM27.126 31.8919H28.7032V34.3568H27.126V31.8919ZM35.8292 34.3568V31.8919H37.4146V34.3568H35.8292Z"
+                                fill="white" />
+                        </svg>
+                    </div>
+                    <span class="h-2/5 flex items-center justify-center">Plataforma</span>
+                </div>
+                <div id="act18-6"
+                    class="hidden flex flex-col shadow-2xl items-center bg-violet-700 w-36 h-36 hover:bg-violet-900">
+                    <span class="h-2/5 flex w-full items-center justify-center">478</span>
+                    <div class="h-3/5 flex items-center justify-center ">
+                        <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M21.3452 22.2492C21.1615 22.6173 20.89 22.9344 20.5546 23.1726C20.2192 23.4108 19.8302 23.5628 19.4221 23.615C19.014 23.6673 18.5994 23.6183 18.2147 23.4722C17.8301 23.3262 17.4874 23.0878 17.2168 22.7779C16.9072 22.5067 16.6692 22.1635 16.5239 21.7785C16.3785 21.3935 16.3303 20.9786 16.3835 20.5705C16.4367 20.1625 16.5897 19.7738 16.8289 19.4389C17.068 19.104 17.3861 18.8332 17.7549 18.6505C18.2744 18.3908 18.7754 18.0754 19.2021 17.6951L14.6748 13.1596L19.2114 8.63339C19.6011 9.06932 19.9165 9.5609 20.1763 10.0896C20.358 10.4587 20.6285 10.777 20.9635 11.0158C21.2986 11.2547 21.6877 11.4067 22.0959 11.4581C22.5042 11.5096 22.9189 11.459 23.3028 11.3108C23.6866 11.1626 24.0277 10.9214 24.2954 10.609C24.6037 10.339 24.841 9.99747 24.9865 9.61441C25.132 9.23135 25.1813 8.81845 25.13 8.41192C25.0787 8.00539 24.9285 7.61764 24.6924 7.28271C24.4563 6.94777 24.1416 6.67586 23.7759 6.49085C23.2473 6.2346 22.7545 5.91031 22.3101 5.52624L26.8467 1L31.3647 5.52624C31.7451 5.09031 32.0605 4.59873 32.3203 4.07933C32.5023 3.70952 32.7731 3.39055 33.1086 3.15092C33.444 2.91129 33.8335 2.75846 34.2425 2.70609C34.6514 2.65373 35.0669 2.70346 35.4519 2.85083C35.8369 2.99821 36.1794 3.23864 36.4487 3.55065C36.7587 3.82114 36.9972 4.16379 37.1433 4.54833C37.2893 4.93287 37.3384 5.34745 37.2861 5.75544C37.2338 6.16343 37.0818 6.55227 36.8436 6.88759C36.6053 7.22292 36.2881 7.4944 35.9199 7.67806C35.4004 7.93776 34.8994 8.25311 34.4727 8.63339L39 13.1596L34.4727 17.6859C34.083 17.2499 33.7676 16.7584 33.5078 16.239C33.3253 15.871 33.0547 15.5537 32.7201 15.3154C32.3855 15.077 31.9973 14.9249 31.5898 14.8726C31.1822 14.8203 30.7681 14.8694 30.3842 15.0155C30.0002 15.1617 29.6582 15.4003 29.3887 15.7103C29.0784 15.9801 28.8393 16.3221 28.6925 16.7062C28.5458 17.0903 28.4959 17.5046 28.5472 17.9125C28.5986 18.3205 28.7496 18.7095 28.987 19.0452C29.2243 19.381 29.5407 19.6531 29.9082 19.8377C30.4277 20.0974 30.9287 20.4127 31.3555 20.8023L26.8281 25.3285L22.3008 20.8023C21.9204 21.2382 21.605 21.7298 21.3452 22.2492V22.2492Z"
+                                fill="white" />
+                            <path
+                                d="M5.2583 23.3158C4.8501 22.9448 4.38623 22.6573 3.89453 22.4069C3.5498 22.2344 3.25286 21.9797 3.02995 21.6653C2.80703 21.3509 2.665 20.9865 2.61639 20.6042C2.56779 20.2219 2.61412 19.8335 2.75128 19.4733C2.88844 19.1132 3.11221 18.7923 3.40283 18.5392C3.65607 18.2486 3.97699 18.0249 4.33724 17.8878C4.69748 17.7506 5.08596 17.7043 5.46836 17.7529C5.85076 17.8015 6.2153 17.9435 6.52978 18.1664C6.84426 18.3892 7.099 18.6861 7.27149 19.0307C7.52197 19.5223 7.81885 19.9768 8.18066 20.3942L12.4297 16.1369L14.9624 18.6597L14.7119 18.8916C14.2997 19.3076 13.9751 19.8021 13.7574 20.3458C13.5398 20.8894 13.4334 21.4712 13.4447 22.0567C13.4559 22.6422 13.5845 23.2195 13.8229 23.7544C14.0613 24.2893 14.4046 24.771 14.8325 25.1708C15.2521 25.6179 15.761 25.9718 16.3261 26.2098C16.8912 26.4477 17.5 26.5644 18.1131 26.5521C18.7262 26.5399 19.3299 26.399 19.885 26.1387C20.4402 25.8784 20.9345 25.5044 21.3359 25.041L23.8687 27.5638L19.6104 31.8304C20.0186 32.1828 20.4824 32.4796 20.9741 32.7208C21.3207 32.8927 21.6193 33.1476 21.8435 33.4629C22.0677 33.7781 22.2105 34.1438 22.2591 34.5275C22.3078 34.9112 22.2608 35.301 22.1224 35.6622C21.984 36.0234 21.7585 36.3448 21.4658 36.5977C21.2126 36.8883 20.8917 37.112 20.5314 37.2491C20.1712 37.3863 19.7827 37.4326 19.4003 37.384C19.0179 37.3354 18.6534 37.1934 18.3389 36.9705C18.0244 36.7477 17.7697 36.4508 17.5972 36.1062C17.3545 35.6142 17.0489 35.1559 16.688 34.7427L12.439 39L8.17139 34.7427C8.58887 34.381 9.05274 34.0935 9.54443 33.843C9.89276 33.6728 10.1933 33.4186 10.4189 33.1034C10.6445 32.7882 10.7882 32.4218 10.8369 32.0372C10.8857 31.6527 10.8381 31.262 10.6983 30.9005C10.5585 30.5389 10.3309 30.2178 10.0361 29.9661C9.78309 29.6735 9.46163 29.448 9.10036 29.3096C8.73909 29.1712 8.34921 29.1243 7.96541 29.1729C7.58161 29.2216 7.21578 29.3643 6.90049 29.5885C6.58519 29.8126 6.3302 30.1112 6.1582 30.4576C5.91844 30.9491 5.61595 31.4074 5.2583 31.8211L1 27.5638L5.2583 23.3158Z"
+                                fill="white" />
+                        </svg>
+                    </div>
+                    <span class="h-2/5 flex items-center justify-center">Rompecabezas</span>
+                </div>
+                <div id="act18-7"
+                    class="hidden flex flex-col shadow-2xl items-center bg-violet-700 w-36 h-36 hover:bg-violet-900">
+                    <span class="h-2/5 flex w-full items-center justify-center">231</span>
+                    <div class="h-3/5 flex items-center justify-center ">
+                        <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M32.5764 33.6963L19.7184 20.066L33.0097 6.72146C21.4299 -5.304 1 2.80824 1 20.066C1 36.884 20.8558 45.1502 32.5764 33.6963ZM18.1477 6.43566C19.4259 6.43566 20.5741 7.44694 20.5741 8.89791C20.5741 10.206 19.4259 11.2173 18.1477 11.2173C17.8472 11.2217 17.5489 11.1651 17.2704 11.0508C16.9918 10.9365 16.7386 10.7668 16.5256 10.5517C16.3127 10.3366 16.1442 10.0804 16.0303 9.79832C15.9163 9.5162 15.8591 9.21379 15.862 8.9089C15.862 7.44694 16.8586 6.43566 18.1368 6.43566H18.1477ZM30.7024 20.5057C30.7335 21.5981 31.1854 22.6347 31.961 23.393C32.7366 24.1513 33.7742 24.5709 34.8512 24.5618C35.93 24.5708 36.9692 24.1497 37.7451 23.389C38.521 22.6284 38.9716 21.5891 39 20.4947C39 19.3781 38.5629 18.3073 37.7848 17.5177C37.0068 16.7282 35.9515 16.2847 34.8512 16.2847C33.7509 16.2847 32.6956 16.7282 31.9176 17.5177C31.1395 18.3073 30.7024 19.3781 30.7024 20.4947V20.5057Z"
+                                fill="white" />
+                        </svg>
+                    </div>
+                    <span class="h-2/5 flex items-center justify-center">Arcade</span>
+                </div>
+                <div id="act18-8"
+                    class="hidden flex flex-col shadow-2xl items-center bg-violet-700 w-36 h-36 hover:bg-violet-900">
+                    <span class="h-2/5 flex w-full items-center justify-center">200</span>
+                    <div class="h-3/5 flex items-center justify-center ">
+                        <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M1 1C5.80011 10.1092 12.4812 17.407 19.7071 24.7358L19.9949 25.0463V25.036L25.35 30.4083C23.8186 31.6125 22.2043 32.7056 20.5191 33.6794L22.8215 35.9877L28.3514 30.4187C31.707 32.6634 34.5631 35.5855 36.7387 39L39 36.7227C35.5772 34.4971 32.5759 31.8368 30.4688 28.2966L36.0192 22.7069L33.7168 20.3985C32.8291 22.1424 31.761 23.787 30.5304 25.3051C27.1199 21.83 23.6276 18.4372 20.0565 15.1297L20.0051 15.0883C14.1977 9.77799 8.15391 5.00599 1 1ZM39 1C32.5795 4.67392 26.5845 9.05532 21.1255 14.0635L22.9654 15.8232L27.5394 11.2065L28.5981 12.283L24.0549 16.8583L26.0387 18.732C31.0135 13.3078 35.5053 7.63525 39 1V1ZM12.4606 11.2065L28.6289 27.4789C28.2691 27.8412 27.9094 28.2035 27.5496 28.5347L11.4122 12.283L12.4709 11.2168L12.4606 11.2065ZM6.29348 20.3985L3.99107 22.7069L9.54152 28.2966C7.42413 31.8368 4.42278 34.4971 1.01028 36.7227L3.27157 39C5.44305 35.5828 8.29565 32.6571 11.6486 30.4083L17.1785 35.9981L19.4809 33.6794C17.7952 32.696 16.1712 31.6091 14.65 30.4083L18.9362 26.1125L16.9318 24.0319L12.4709 28.5347C12.1009 28.1828 11.7411 27.8308 11.3917 27.4685L15.8834 22.945L13.9099 20.885C12.4401 22.3342 10.96 23.8041 9.46957 25.3154C8.23829 23.7942 7.17023 22.146 6.2832 20.3985H6.29348Z"
+                                fill="white" />
+                        </svg>
+                    </div>
+                    <span class="h-2/5 flex items-center justify-center">MMO</span>
+                </div>
+                <div id="act18-9"
+                    class="hidden flex flex-col shadow-2xl items-center bg-violet-700 w-36 h-36 hover:bg-violet-900">
+                    <span class="h-2/5 flex w-full items-center justify-center">171</span>
+                    <div class="h-3/5 flex items-center justify-center ">
+                        <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M36.7382 21.1475C37.4092 22.4265 37.8223 23.8255 37.9541 25.2646C38.0858 26.7037 37.9335 28.1547 37.5059 29.5348C37.0783 30.9149 36.3838 32.197 35.4619 33.3079C34.5401 34.4189 33.4091 35.337 32.1333 36.0097L28.6114 37.8648L27.7493 38.3286C26.1302 39.1718 24.2168 39.2245 22.5557 38.4656L8.79383 32.5629L10.0975 28.7156L18.2768 30.2967L14.04 22.2227L7.19581 9.22619L10.5285 7.47646L17.3622 20.4729L18.9917 19.6086L15.9849 13.8746L19.3071 12.1248L22.3139 17.8589L23.954 16.9946L21.6411 12.5675L24.9633 10.8073L27.2762 15.2343L28.9268 14.3594L27.3288 11.3132L30.651 9.57403L32.249 12.6202L36.7276 21.1475H36.7382ZM4.95648 10.9654C4.3313 10.3382 3.88547 9.5543 3.66552 8.69546C3.44557 7.83663 3.45955 6.93435 3.70602 6.08278C3.95249 5.23122 4.4224 4.46158 5.06672 3.85419C5.71104 3.24679 6.50615 2.82391 7.36907 2.62967C8.23199 2.43543 9.1311 2.47695 9.97256 2.74989C10.814 3.02284 11.567 3.51721 12.1529 4.18141C12.7388 4.84561 13.1361 5.6553 13.3035 6.52598C13.4708 7.39665 13.402 8.2964 13.1043 9.13133L13.9769 10.7756C14.6966 9.56807 15.0036 8.15798 14.8512 6.75956C14.6988 5.36113 14.0953 4.05078 13.1325 3.02751C12.1697 2.00424 10.9001 1.32396 9.51649 1.09C8.13292 0.856034 6.71099 1.08117 5.46666 1.73121C4.22233 2.38125 3.2236 3.42068 2.62214 4.69162C2.02068 5.96257 1.84936 7.39559 2.1342 8.77305C2.41904 10.1505 3.14448 11.3971 4.20034 12.3236C5.2562 13.25 6.58478 13.8057 7.98431 13.9062L7.11171 12.2408C6.29675 12.012 5.55443 11.5764 4.95648 10.9759V10.9654Z"
+                                fill="white" />
+                        </svg>
+                    </div>
+                    <span class="h-2/5 flex items-center justify-center">Point & Click</span>
+                </div>
+                <div id="act18-10"
+                    class="hidden flex flex-col shadow-2xl items-center bg-violet-700 w-36 h-36 hover:bg-violet-900">
+                    <span class="h-2/5 flex w-full items-center justify-center">34</span>
+                    <div class="h-3/5 flex items-center justify-center ">
+                        <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M26.9393 21.1704C26.3167 20.9878 25.8934 20.5229 25.9349 20.0166C25.9349 19.5186 26.3582 19.0537 26.931 18.896C27.1302 18.8545 27.2464 18.6221 27.2049 18.4312C27.014 17.5845 26.7069 16.7711 26.242 16.0323C26.1258 15.8414 25.8934 15.7999 25.7025 15.8829C25.0384 16.2647 24.2748 16.1485 23.9262 15.6505C23.6522 15.2604 23.6938 14.6793 24.0424 14.2228C24.1171 14.1398 24.1171 14.0236 24.1171 13.9074C24.0877 13.807 24.0334 13.7156 23.9594 13.6418C23.2061 13.1441 22.3676 12.7896 21.4858 12.5959C21.3696 12.5544 21.2949 12.5959 21.1787 12.6374C21.0957 12.6706 21.021 12.7868 21.021 12.8698C20.8716 13.5588 20.4067 14.0319 19.8257 13.9904C19.2862 13.9904 18.7798 13.5256 18.6636 12.8283C18.6379 12.7258 18.5864 12.6315 18.5142 12.5544C18.4312 12.5212 18.315 12.4797 18.1988 12.5212C17.3251 12.7149 16.4893 13.0514 15.7252 13.5173C15.6505 13.6003 15.5758 13.6833 15.5343 13.7912C15.4928 13.9074 15.5343 14.0236 15.6173 14.1066C15.9576 14.5631 15.9991 15.1442 15.7252 15.5343C15.3766 16.0323 14.5631 16.1485 13.9074 15.7667C13.8188 15.7166 13.715 15.7007 13.6155 15.7221C13.516 15.7436 13.4279 15.8008 13.3678 15.8829C12.8961 16.6291 12.559 17.4523 12.3718 18.315C12.3303 18.5059 12.4465 18.7383 12.6706 18.7798C13.3346 18.9375 13.7497 19.4439 13.7497 19.9751C13.7497 20.5229 13.2931 20.9878 12.6706 21.1372C12.5718 21.1644 12.4863 21.2265 12.4298 21.312C12.3733 21.3974 12.3498 21.5005 12.3635 21.602C12.5603 22.463 12.8998 23.2851 13.3678 24.0341C13.4841 24.2333 13.7165 24.2665 13.9074 24.1503C14.5714 23.7685 15.3766 23.8847 15.7335 24.3827C15.9991 24.7728 15.9576 25.3539 15.609 25.8187C15.5343 25.8934 15.5343 26.0096 15.5343 26.1258C15.5758 26.242 15.6173 26.3167 15.7252 26.3914C16.4972 26.8978 17.3521 27.2464 18.2403 27.4373H18.3233C18.5142 27.4373 18.6636 27.3211 18.7051 27.1302C18.8628 26.5076 19.3692 26.0843 19.8672 26.0843C20.3652 26.0843 20.8301 26.5076 21.0293 27.1302C21.0625 27.3211 21.2949 27.4788 21.4858 27.4041C22.3676 27.2104 23.2061 26.8559 23.9594 26.3582C24.0424 26.2752 24.1171 26.2005 24.1171 26.0843C24.1336 26.0305 24.1345 25.9731 24.1198 25.9188C24.1052 25.8645 24.0754 25.8154 24.0341 25.7772C23.887 25.572 23.7992 25.3302 23.7801 25.0785C23.7611 24.8267 23.8116 24.5745 23.9262 24.3495C24.2748 23.8515 25.0467 23.727 25.7025 24.1171C25.791 24.1672 25.8949 24.1831 25.9944 24.1617C26.0938 24.1402 26.182 24.083 26.242 24.0009C26.7069 23.2621 27.0555 22.4155 27.2464 21.5605C27.2464 21.4443 27.1302 21.2534 26.9393 21.1787V21.1704ZM19.8257 22.2578C19.2313 22.2578 18.6613 22.0216 18.241 21.6013C17.8207 21.181 17.5845 20.611 17.5845 20.0166C17.5845 19.4222 17.8207 18.8522 18.241 18.4319C18.6613 18.0116 19.2313 17.7754 19.8257 17.7754C20.4201 17.7754 20.9901 18.0116 21.4104 18.4319C21.8307 18.8522 22.0668 19.4222 22.0668 20.0166C22.0668 20.611 21.8307 21.181 21.4104 21.6013C20.9901 22.0216 20.4201 22.2578 19.8257 22.2578V22.2578ZM18.4312 1H21.0957V5.4491H18.4395L18.4312 1ZM34.5592 16.6217H39V19.2779H34.5592V16.6217ZM1 16.6217H5.4491V19.2779H1V16.6217ZM5.391 6.8768L7.27523 4.99257L10.4211 8.13849L8.53692 10.0227L5.391 6.8768ZM29.5457 8.09699L32.6999 4.95107L34.5758 6.8353L31.4299 9.98121L29.5457 8.09699Z"
+                                fill="white" />
+                            <path
+                                d="M19.7842 7.57405C18.134 7.57077 16.4995 7.89337 14.9743 8.52335C13.4491 9.15332 12.0633 10.0783 10.8965 11.2451C9.72964 12.412 8.8047 13.7977 8.17472 15.3229C7.54475 16.8481 7.22214 18.4826 7.22543 20.1328C7.23673 22.3788 7.84347 24.5816 8.98377 26.5166C10.1241 28.4516 11.7572 30.0496 13.7165 31.1477V34.7086C13.7165 34.941 13.9489 35.1236 14.1398 35.1236H14.3722V36.8336C14.3722 37.066 14.6046 37.2569 14.8038 37.2569H15.5343V38.5684C15.5343 38.8008 15.7667 39 15.9576 39H23.6523C23.8847 39 24.0756 38.7676 24.0756 38.5684V37.2569H24.7396C24.9637 37.2569 25.1547 37.0245 25.1547 36.8336V35.1319H25.4701C25.7025 35.1319 25.8934 34.8995 25.8934 34.7086V31.1477C27.8596 30.0577 29.4984 28.4615 30.6397 26.5247C31.7811 24.5878 32.3835 22.3809 32.3845 20.1328C32.3626 16.8016 31.0267 13.6136 28.6673 11.2619C26.3078 8.91024 23.1155 7.58492 19.7842 7.57405ZM15.7999 29.6038L15.3434 29.3713C13.2304 28.375 11.5212 26.6868 10.4986 24.5864C9.47609 22.4859 9.20164 20.0993 9.7207 17.8216C10.2398 15.5439 11.5212 13.5118 13.3529 12.0618C15.1845 10.6118 17.4565 9.8309 19.7925 9.84841C25.5116 9.84841 30.0271 14.4469 30.0271 20.1411C30.0271 24.0424 27.7527 27.6697 24.1918 29.3713L23.7685 29.6038C23.6967 29.64 23.6367 29.6959 23.5955 29.765C23.5544 29.8341 23.5337 29.9135 23.536 29.9939V32.8908H15.9991V29.9856C15.9991 29.8362 15.9161 29.6785 15.8082 29.6038H15.7999Z"
+                                fill="white" />
+                        </svg>
+                    </div>
+                    <span class="h-2/5 flex items-center justify-center">Educativo</span>
+                </div>
+                <div id="act18-11"
+                    class="hidden flex flex-col shadow-2xl items-center bg-violet-700 w-36 h-36 hover:bg-violet-900">
+                    <span class="h-2/5 flex w-full items-center justify-center">22</span>
+                    <div class="h-3/5 flex items-center justify-center ">
+                        <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M36.7468 1.01L35.7431 1.32003L14.0415 8.14068L13.4995 8.3107V31.6529C13.3991 31.6129 13.2987 31.5729 13.1783 31.5429C12.5533 31.3551 11.9038 31.2607 11.251 31.2629C10.5484 31.2629 9.77546 31.3429 8.98248 31.5229C7.39652 31.873 5.97117 32.523 4.88709 33.3231C3.80302 34.1432 3 35.1233 3 36.3134C3 36.9034 3.25094 37.4635 3.64241 37.8635C4.03389 38.2636 4.54581 38.5436 5.11796 38.7236C6.2723 39.0836 7.72777 39.0936 9.32377 38.7436C10.9097 38.3936 12.3351 37.7435 13.4192 36.9334C14.4932 36.1234 15.2962 35.1333 15.2962 33.9532C15.2962 33.5931 15.2059 33.2531 15.0453 32.9431V17.4716L35.201 11.151V22.9021C35.1006 22.8521 34.9902 22.8221 34.8798 22.7821C34.2511 22.5966 33.5982 22.5056 32.9425 22.5121C30.6549 22.5047 28.425 23.2266 26.5786 24.5723C25.5046 25.3823 24.7016 26.3724 24.7016 27.5525C24.7016 28.1526 24.9525 28.7026 25.3339 29.1127C25.7354 29.5127 26.2373 29.7828 26.8195 29.9628C27.9739 30.3228 29.4293 30.3328 31.0153 29.9828C32.6012 29.6427 34.0266 28.9827 35.1107 28.1826C36.1948 27.3625 36.9978 26.3824 36.9978 25.1923C36.9978 24.8423 36.8974 24.4922 36.7468 24.1922V1V1.01ZM35.201 3.1102V5.52043L15.0453 11.851V9.44081L35.201 3.1102ZM35.201 7.14059V9.53082L15.0453 15.8614V13.4612L35.201 7.15059V7.14059Z"
+                                fill="white" />
+                        </svg>
+                    </div>
+                    <span class="h-2/5 flex items-center justify-center">Música</span>
+                </div>
+            </div>
+            <button id="btnMASsss" class="bg-violet-800 text-white w-1/6 border mt-6 text-center">Cargar más</button>
+        </div>
+        <!--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------->
+    </main>
+    <footer>
+        <!------------------------------------ACTIVIDAD-17--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------->
+        <div class="flex flex flex-col justify-center items-center bg-[#150733]">
+            <div class="flex flex-row justify-center items-center bg-white w-full h-12">
+                <ul class="flex flex-row h-8 mx-auto space-x-3 w-8/12">
+                    <li>
+                        <img src="https://assets.eneba.games/payments/v1/color/wallet.svg" alt="" loading="lazy"
+                            class="h-full" />
+                    </li>
+                    <li>
+                        <img src="https://assets.eneba.games/payments/v1/color/checkout.svg" alt="" loading="lazy"
+                            class="h-full" />
+                    </li>
+                    <li>
+                        <img src="https://assets.eneba.games/payments/v1/color/braintree_paypal.svg" alt=""
+                            loading="lazy" class="h-full" />
+                    </li>
+                    <li>
+                        <img src="https://assets.eneba.games/payments/v1/color/ebanx_oxxopay_voucher.svg" alt=""
+                            loading="lazy" class="h-full" />
+                    </li>
+                    <li>
+                        <img src="https://assets.eneba.games/payments/v1/color/dlocal_oxxo.svg" alt="" loading="lazy"
+                            class="h-full" />
+                    </li>
+                    <li>
+                        <img src="https://assets.eneba.games/payments/v1/color/dlocal_bbva_bancomer.svg" alt=""
+                            loading="lazy" class="h-full" />
+                    </li>
+                    <li>
+                        <img src="https://assets.eneba.games/payments/v1/color/dlocal_banorte.svg" alt="" loading="lazy"
+                            class="h-full" />
+                    </li>
+                    <li>
+                        <img src="https://assets.eneba.games/payments/v1/color/dlocal_spei.svg" alt="" loading="lazy"
+                            class="h-full" />
+                    </li>
+                    <li>
+                        <img src="https://assets.eneba.games/payments/v1/color/dlocal_santander.svg" alt=""
+                            loading="lazy" class="h-full" />
+                    </li>
+                    <li>
+                        <img src="https://assets.eneba.games/payments/v1/color/nuvei_crypto.svg" alt="" loading="lazy"
+                            class="h-full" />
+                    </li>
+                </ul>
+            </div>
+            <div class="flex flex-row w-full items-start justify-center space-x-10 py-4 px-4">
+                <div class="fle flex-col text-white font-normal">
+                    <h1 class="font-bold">Sobre Eneba</h1>
+                    <p>Sobre nosotros</p>
+                    <p>Contactanos</p>
+                    <p>Vacantes</p>
+                </div>
+                <div class="fle flex-col text-white font-normal">
+                    <h1 class="font-bold">Comprar</h1>
+                    <p>Como comprar</p>
+                    <p>Lista de juegos</p>
+                    <p>Colecciones</p>
+                    <p>Programa de fidelidad</p>
+                </div>
+                <div class="fle flex-col text-white font-normal">
+                    <h1 class="font-bold">Ayuda</h1>
+                    <p>Preguntas frecuentes</p>
+                    <p>Como activar tus juegos</p>
+                    <p>Crear un ticket</p>
+                    <p>Politica de devoluciones</p>
+                </div>
+                <div class="fle flex-col text-white font-normal">
+                    <h1 class="font-bold">Comunidad</h1>
+                    <p>Blog</p>
+                    <p>Sorteos</p>
+                    <p>Conviertete en afiliado</p>
+                </div>
+                <div class="fle flex-col text-white font-normal space-y-10">
+                    <h1 class="font-bold my-2">Negocios</h1>
+                    <a href="https://www.eneba.com/latam/sell-with-eneba"
+                        class="border border-white p-2 py-1 font-bold hover:border-[#FDC850]">Vende en eneba</a>
+                </div>
+                <div class="fle flex-col text-white font-normal space-y-5">
+                    <h1 class="font-bold">Siguenos</h1>
+                    <ul class="flex flex-row space-x-5">
+                        <li class="">
+                            <a title="Facebook" href="https://www.facebook.com/enebaglobal/" target="_blank"
+                                rel="noreferrer noopener">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="11" height="23" viewBox="0 0 11 23"
+                                    class="" style="width: 28px; height: 28px">
+                                    <path fill="#fff"
+                                        d="M6.87 7.87h3.8l-.26 3.21H6.87v11.15H2.39V11.08H0v-3.2h2.39V5.72c0-.95.03-2.42.77-3.33.78-.96 1.86-1.61 3.7-1.61 3.02 0 4.3.4 4.3.4l-.6 3.28s-1-.26-1.93-.26c-.93 0-1.76.3-1.76 1.17v2.5z">
+                                    </path>
+                                </svg>
+                            </a>
+                        </li>
+                        <li>
+                            <a title="Twitter" href="https://twitter.com/eneba_games" target="_blank"
+                                rel="noreferrer noopener">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="23" height="18" viewBox="0 0 23 18"
+                                    class="" style="width: 28px; height: 28px">
+                                    <path fill="#fff"
+                                        d="M20.65 4.75l.01.57c0 5.8-4.6 12.47-13.02 12.47-2.58 0-4.98-.72-7.01-1.97A9.44 9.44 0 0 0 7.4 14c-2-.03-3.69-1.3-4.27-3.03a4.78 4.78 0 0 0 2.07-.08 4.44 4.44 0 0 1-3.67-4.3v-.05a4.9 4.9 0 0 0 2.07.55 4.34 4.34 0 0 1-2.04-3.65c0-.8.23-1.56.62-2.2a13.19 13.19 0 0 0 9.43 4.57 4.22 4.22 0 0 1-.11-1A4.48 4.48 0 0 1 16.07.43c1.32 0 2.5.53 3.34 1.38a9.42 9.42 0 0 0 2.9-1.06 4.44 4.44 0 0 1-2 2.43c.92-.11 1.8-.35 2.62-.7a9.1 9.1 0 0 1-2.28 2.27z">
+                                    </path>
+                                </svg>
+                            </a>
+                        </li>
+                        <li>
+                            <a title="Instagram" href="https://www.instagram.com/enebagames/" target="_blank"
+                                rel="noreferrer noopener">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="26" height="24" viewBox="0 0 26 24"
+                                    class="" style="width: 28px; height: 28px">
+                                    <path fill="#fff"
+                                        d="M16.83 11.91c0-1.58-1-3-2.51-3.61a4.2 4.2 0 0 0-4.44.84A3.8 3.8 0 0 0 9 13.41a4.08 4.08 0 0 0 3.76 2.42 4 4 0 0 0 4.07-3.92zm-1.63 5.68a6.57 6.57 0 0 1-6.96-1.33 5.97 5.97 0 0 1-1.38-6.7 6.4 6.4 0 0 1 5.9-3.8 6.28 6.28 0 0 1 6.39 6.15 6.15 6.15 0 0 1-3.95 5.68zm7.68-5.68l-.08-5a4.8 4.8 0 0 0-4.84-4.65l-5.2-.08-5.2.08a4.8 4.8 0 0 0-4.84 4.65l-.08 5 .08 5a4.8 4.8 0 0 0 4.84 4.66l5.2.08 5.2-.08a4.8 4.8 0 0 0 4.84-4.66zm2.32 0v.02l-.08 5.02A7.07 7.07 0 0 1 18 23.8l-5.24.07h-.02l-5.22-.07A7.07 7.07 0 0 1 .4 16.95l-.08-5.04v-.01L.4 6.88A7.07 7.07 0 0 1 7.52.03l5.24-.08h.02L18 .03a7.07 7.07 0 0 1 7.12 6.85zm-4.57-6.25c0 .56-.35 1.07-.9 1.28-.53.22-1.15.1-1.56-.3-.41-.4-.54-.99-.31-1.5.22-.52.75-.86 1.33-.86.8 0 1.44.62 1.44 1.38z">
+                                    </path>
+                                </svg>
+                            </a>
+                        </li>
+                        <li class="">
+                            <a title="Discord" href="https://discord.gg/J8w8R4U3jD" target="_blank"
+                                rel="noreferrer noopener">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" class=""
+                                    style="width: 28px; height: 28px">
+                                    <path fill="#fff"
+                                        d="M297.22 243.2c0 15.62-11.52 28.42-26.12 28.42-14.33 0-26.1-12.8-26.1-28.42s11.51-28.42 26.1-28.42c14.6 0 26.12 12.8 26.12 28.42zm-119.56-28.42c-14.59 0-26.1 12.8-26.1 28.42s11.77 28.42 26.1 28.42c14.6 0 26.12-12.8 26.12-28.42.25-15.62-11.52-28.42-26.12-28.42zM448 52.74V512c-64.5-57-43.87-38.13-118.78-107.78l13.56 47.36H52.48C23.55 451.58 0 428.03 0 398.85V52.74C0 23.55 23.55 0 52.48 0h343.04C424.45 0 448 23.55 448 52.74zm-72.96 242.68c0-82.43-36.86-149.24-36.86-149.24-36.87-27.65-71.94-26.88-71.94-26.88l-3.58 4.1c43.52 13.3 63.74 32.5 63.74 32.5-60.81-33.33-132.24-33.33-191.23-7.42-9.47 4.35-15.1 7.42-15.1 7.42s21.24-20.22 67.32-33.53l-2.56-3.07s-35.07-.77-71.93 26.88c0 0-36.87 66.81-36.87 149.24 0 0 21.5 37.12 78.08 38.92 0 0 9.47-11.52 17.15-21.25-32.5-9.73-44.8-30.21-44.8-30.21 3.77 2.64 9.98 6.05 10.5 6.4 43.21 24.2 104.59 32.13 159.74 8.96a146.5 146.5 0 0 0 29.44-15.1s-12.8 20.99-46.33 30.46c7.68 9.73 16.9 20.74 16.9 20.74 56.57-1.8 78.33-38.92 78.33-38.92z">
+                                    </path>
+                                </svg>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="fle flex-col text-white font-normal space-y-3 h-full w-40">
+                    <h1 class="font-bold">Siguenos</h1>
+                    <div class="w-full h-full space-y-4 h-full w-full">
+                        <a target="_blank" rel="noreferrer noopener nofollow"
+                            href="https://play.google.com/store/apps/details?id=com.eneba.app&amp;utm_source=eneba_web&amp;utm_medium=create_listing&amp;utm_campaign=footer"><img
+                                src="https://static.eneba.games/mobile/v1/appAndroidCTA.svg" alt="Google play badge"
+                                class="" /></a><a target="_blank" rel="noreferrer noopener nofollow"
+                            href="https://apps.apple.com/app/apple-store/id1564406362?pt=122902014&amp;ct=w-sf-footer&amp;mt=8"><img
+                                src="https://static.eneba.games/mobile/v1/appAppleCTA.svg" alt="Apple badge"
+                                class="" /></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------->
+        <!------------------------------------ACTIVIDAD-18--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------->
+        <div class="flex flex flex-col justify-center items-center bg-[#150733] mt-auto">
+            <div class="w-full flex flex-col md:flex-row justify-between items-center text-white p-4">
+                <div class="md:w-1/2 flex flex-col items-start">
+                    <div>
+                        <h1 class="font-bold">Ver qué dijeron de nosotros</h1>
+                        <a href="https://es.trustpilot.com/review/eneba.com" target="_blank" rel="noopener noreferrer">
+                            <img src="./imgs/stars-4.5.svg" alt="Trustpilot" class="mt-4" height="150" width="150" />
+                        </a>
+                        <p>TrustScore 4.5 | 155.352 opiniones</p>
+                    </div>
+                    <div class="text-center md:text-left mt-4 md:mt-0">
+                        <h2 class="font-bold">Obtén ofertas personalizadas de videojuegos</h2>
+                        <input type="text" placeholder="Ingresa tu email"
+                            class="mt-4 px-4 py-2 border border-white bg-[#150733] text-white" />
+                        <button class="mt-4 px-6 py-2 border border-white bg-[#150733] text-white">Suscribirse</button>
+                        <h2>Puedes darte de baja en cualquier momento.</h2>
+                    </div>
+                </div>
+                <!-- Botón "Español Latinoamericano | MXN" -->
+                <button id="openModal2" class="px-6 py-2 border border-white bg-[#150733] text-white">Español
+                    Latinoamericano | MXN
+                </button>
+            </div>
+        </div>
+        <!--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------->
+    </footer>
+    <script src="JavaScript/script.js"></script>
+</body>
+
+</html>
